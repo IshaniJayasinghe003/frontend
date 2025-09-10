@@ -4,6 +4,7 @@ import axios from "axios";
 import toast from "react-hot-toast";
 import { useGoogleLogin } from "@react-oauth/google";
 
+
 export default function LoginPage() {
     const [email,setEmail] = useState("")
     const [password,setPassword] = useState("")
@@ -65,8 +66,8 @@ export default function LoginPage() {
     }
 
 	return (
-        <div className="w-full h-screen bg-[url(./loginbg.jpg)] bg-cover bg-center flex justify-center items-center">
-        <div className="w-[500px] h-[500px] backdrop-blur-sm shadow-2xl rounded-[30px] relative gap-[20px] text-white flex flex-col items-center justify-center">
+<div className="w-full h-screen bg-[url('/newbg.jpg')] bg-cover bg-center flex justify-center items-center">
+ <div className="w-[500px] h-[500px] backdrop-blur-sm shadow-2xl rounded-[30px] relative gap-[20px] text-white flex flex-col items-center justify-center">
 				<h1 className="absolute top-[20px] text-2xl font-bold text-center my-5">Login</h1>
                 <div className="w-[350px]  flex flex-col    ">
                     <span className="text-lg ">Email</span>

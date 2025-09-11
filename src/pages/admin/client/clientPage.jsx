@@ -5,6 +5,7 @@ import ProductPage from "./productPage";
 import ProductOverViewPage from "./productOverView";
 import CartPage from "./cart";
 import CheckoutPage from "./checkoutPage";
+import HomePage from "../../homePage";
 
 export default function ClientWebPage() {
     return (
@@ -14,7 +15,7 @@ export default function ClientWebPage() {
                 <Routes path="/">
                     <Route 
                     path="/"
-                     element={<h1 className="text-3xl text-center">Welcome to the Home Page</h1>}
+                     element={<HomePage />}
                       />
 
                     <Route 

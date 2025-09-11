@@ -1,4 +1,4 @@
-import { Link, Route, Routes } from "react-router-dom";
+import { Link, Route, Routes, useNavigate } from "react-router-dom";
 import { FaBoxArchive } from "react-icons/fa6"; 
 import { GiShoppingBag } from "react-icons/gi";
 import { IoPeopleSharp } from "react-icons/io5";
@@ -7,14 +7,45 @@ import ProductsAdminPage from "./admin/productsAdminPage";
 import AddProductAdminPage from "./admin/addProductAdminPage";
 import UpdateProductpage from "./admin/updateProduct";
 import OrdersPageAdmin from "./admin/ordersPageAdmin";
-
-
-
+import { useState,useEffect } from "react";
+import axios from "axios";                    
+import toast from "react-hot-toast";
+import Loader from "../components/loader";
+               
 
 
 export default function AdminPage() {
+    const navigate = useNavigate();
+    const [adminValidated, setAdminValidated] = useState(false);
+    useEffect(
+            ()=>{
+                const token = localStorage.getItem("token");
+                if(token == null){
+                    toast.error("You are not logged in"); 
+                    navigate("/login");
+                }else{
+                    axios.get(import.meta.env.VITE_BACKEND_URL+"/api/users",{
+                        headers:{
+                            Authorization: `Bearer ${token}`
+                        },
+                    }).then((response)=>{
+                        if(response.data.role == "admin"){
+                            setAdminValidated(true);
+                        }else{
+                            toast.error("You are not authorized");
+                            navigate("/login");
+                        }
+                    }).catch(()=>{
+                        toast.error("You are not authorized");
+                        navigate("/login")
+                    });
+                }
+            }
+    ,[]);
     return (
+     
         <div className="w-full h-screen flex ">
+            {adminValidated?<>
         <div className="w-[300px] h-full flex flex-col items-center">
           <span className="text-3xl font-bold my-5">Admin Panel</span>
 
@@ -33,7 +64,8 @@ export default function AdminPage() {
                 <Route path="/UpdateProduct/*" element={<UpdateProductpage />} />
             </Routes>
         </div>
-       
-        </div>
+        </>:<Loader/>}
+       </div>
+        
     );
 }

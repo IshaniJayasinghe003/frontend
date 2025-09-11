@@ -14,9 +14,6 @@ const clientId =
 "809363394795-kfis3dejn0cec47dt4tf0pg8i5qkchd8.apps.googleusercontent.com"
 const clientSecret = 
 "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"
-
-
-
 function App(){
   return(
     <BrowserRouter>
@@ -24,6 +21,7 @@ function App(){
     <div className="w-full h-screen flex justify-center bg-primary items-center text-secondary">
     <Toaster position="top-right"/>
    <Routes path="/">
+        
         <Route path="/login" element={<LoginPage />} />
         <Route path="/test" element={<TestPage/>} />    
         <Route path="/register" element={<RegisterPage />} />
@@ -38,3 +36,5 @@ function App(){
 }
 
 export default App;
+
+

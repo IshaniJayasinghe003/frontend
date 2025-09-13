@@ -13,7 +13,7 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-white bg-opacity-40"></div>
 
         {/* Text Content */}
-        <div className="relative text-center text-white px-4">
+        <div className="relative text-left text-white px-4">
           <h1 className="text-6xl font-extrabold mb-4 text-pink-600">
             Welcome to Evara Beauty
           </h1>
@@ -42,8 +42,8 @@ export default function HomePage() {
             className="w-full h-60 object-cover transform group-hover:scale-110 transition duration-500"
           />
           <div className="absolute inset-0 bg-black bg-opacity-40 flex flex-col items-center justify-center text-white opacity-0 group-hover:opacity-100 transition">
-            <h3 className="text-xl font-semibold mb-2">Facials</h3>
-            <button className="bg-pink-600 px-4 py-2 rounded-lg">Book Now →</button>
+            <h3 className="text-xl font-semibold mb-2">Make Up </h3>
+            <button className="bg-pink-600 px-4 py-2 rounded-lg">See More Products →</button>
           </div>
         </div>
 
@@ -56,7 +56,7 @@ export default function HomePage() {
           />
           <div className="absolute inset-0 bg-black bg-opacity-40 flex flex-col items-center justify-center text-white opacity-0 group-hover:opacity-100 transition">
             <h3 className="text-xl font-semibold mb-2">Skincare</h3>
-            <button className="bg-pink-600 px-4 py-2 rounded-lg">Book Now →</button>
+            <button className="bg-pink-600 px-4 py-2 rounded-lg">See More Products →</button>
           </div>
         </div>
 
@@ -68,8 +68,8 @@ export default function HomePage() {
             className="w-full h-60 object-cover transform group-hover:scale-110 transition duration-500"
           />
           <div className="absolute inset-0 bg-black bg-opacity-40 flex flex-col items-center justify-center text-white opacity-0 group-hover:opacity-100 transition">
-            <h3 className="text-xl font-semibold mb-2">Makeup</h3>
-            <button className="bg-pink-600 px-4 py-2 rounded-lg">Book Now →</button>
+            <h3 className="text-xl font-semibold mb-2">Hair Care</h3>
+            <button className="bg-pink-600 px-4 py-2 rounded-lg">See More Products →</button>
           </div>
         </div>
 
@@ -81,8 +81,8 @@ export default function HomePage() {
             className="w-full h-60 object-cover transform group-hover:scale-110 transition duration-500"
           />
           <div className="absolute inset-0 bg-black bg-opacity-40 flex flex-col items-center justify-center text-white opacity-0 group-hover:opacity-100 transition">
-            <h3 className="text-xl font-semibold mb-2">Hair Care</h3>
-            <button className="bg-pink-600 px-4 py-2 rounded-lg">Book Now →</button>
+            <h3 className="text-xl font-semibold mb-2">Body Care</h3>
+            <button className="bg-pink-600 px-4 py-2 rounded-lg">See More Products →</button>
           </div>
         </div>
       </div>

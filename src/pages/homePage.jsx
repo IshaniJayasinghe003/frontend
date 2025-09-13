@@ -10,12 +10,25 @@ export default function HomePage() {
         }}
       >
         {/* Overlay */}
-        <div className="absolute inset-0 bg-black bg-opacity-40"></div>
+        <div className="absolute inset-0 bg-white bg-opacity-40"></div>
 
         {/* Text Content */}
         <div className="relative text-center text-white px-4">
-          <h1 className="text-6xl font-extrabold mb-4">Welcome</h1>
-          <p className="text-2xl">To a Full Beauty & Co Experience</p>
+          <h1 className="text-6xl font-extrabold mb-4 text-pink-600">
+            Welcome to Evara Beauty
+          </h1>
+          <p className="text-2xl text-gray-800 mb-2">
+            A Full Beauty & Co Experience
+          </p>
+          <p className="text-lg text-gray-600 leading-relaxed max-w-2xl">
+            At <span className="font-semibold text-pink-600">Evara Beauty</span>, we
+            believe beauty is about confidence, elegance, and self-expression. 
+            We are proud to bring you a premium collection of <span className="font-medium">trusted branded items</span> – 
+            from luxurious skincare to professional makeup essentials – all carefully selected to match your lifestyle. 
+            Whether you’re preparing for a special occasion or refreshing your daily look, 
+            we’re here to provide you with the best products and services that help you glow inside and out.
+          </p>
+
         </div>
       </div>
 

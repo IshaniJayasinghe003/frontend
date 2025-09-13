@@ -17,10 +17,10 @@ export default function HomePage() {
           <h1 className="text-6xl font-extrabold mb-6 text-pink-600">
             Welcome to Evara Beauty
           </h1>
-          <p className="text-2xl mb-4 text-white">
+          <p className="text-2xl mb-4 text-pink-600">
             A Full Beauty & Co Experience
           </p>
-          <p className="text-lg text-white leading-relaxed">
+          <p className="text-lg text-black leading-relaxed">
             At <span className="font-semibold text-pink-600">Evara Beauty</span>, we
             believe beauty is about confidence, elegance, and self-expression. 
             We are proud to bring you a premium collection of <span className="font-medium text-pink-600">trusted branded items</span> – 

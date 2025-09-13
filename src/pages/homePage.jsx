@@ -31,7 +31,7 @@ export default function HomePage() {
             </p>
 
             {/* Buttons */}
-            <div className="flex flex-col sm:flex-row gap-3"> {/* Reduced gap */}
+            <div className="flex flex-col sm:flex-row gap-5"> {/* Reduced gap */}
               <button className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition">
                 See More
               </button>
@@ -55,10 +55,10 @@ export default function HomePage() {
       {/* Our Collections Section */}
       <div className="bg-white pt-4 pb-4"> {/* Reduced padding */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-extrabold text-gray-900 mb-2"> {/* Reduced mb */}
+          <h2 className="text-3xl font-extrabold text-gray-900 mb-2 text-center"> {/* Reduced mb */}
             Our Collections
           </h2>
-          <p className="text-lg text-gray-600 mb-3"> {/* Added mb for smaller gap above cards */}
+          <p className="text-lg text-gray-600 mb-3 text-center"> {/* Added mb for smaller gap above cards */}
             At Evara, we offer a wide range of collections to help you look and feel your best.
           </p>
         </div>

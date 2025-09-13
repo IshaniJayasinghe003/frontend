@@ -37,7 +37,7 @@ export default function HomePage() {
             <img
               src="/small_product.jpg" // replace with your small image
               alt="small product"
-              className="w-56 h-56 rounded-full border-4 border-white shadow-lg object-cover"
+              className="w-75 h-75 rounded-full border-4 border-white shadow-lg object-cover"
             />
           </div>
         </div>

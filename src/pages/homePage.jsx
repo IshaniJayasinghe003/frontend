@@ -2,7 +2,8 @@ export default function HomePage() {
   return (
     <div className="w-full relative flex flex-col px-4 md:px-12">
       {/* Hero Section */}
-      <div className="relative w-full h-screen flex items-center">
+      <div className="relative w-full h-screen flex items-center justify-start">
+        {/* Background Image */}
         <img
           src="/hero_bg.jpg"
           alt="hero"
@@ -12,20 +13,32 @@ export default function HomePage() {
         {/* Overlay */}
         <div className="absolute inset-0 bg-white bg-opacity-40"></div>
 
-        {/* Text Content */}
-        <div className="relative text-center text-black px-4 max-w-3xl mx-auto">
-          <h1 className="text-5xl md:text-6xl font-extrabold mb-4">
-            Welcome to Evara Cosmetic Collection
-          </h1>
-          <p className="text-lg text-gray-700 leading-relaxed">
-            At <span className="font-semibold text-blue-600">Evara Beauty</span>, we
-            believe beauty is about confidence, elegance, and self-expression. 
-            We are proud to bring you a premium collection of{" "}
-            <span className="font-medium">trusted branded items</span> – 
-            from luxurious skincare to professional makeup essentials – all carefully selected to match your lifestyle. 
-            Whether you’re preparing for a special occasion or refreshing your daily look, 
-            we’re here to provide you with the best products and services that help you glow inside and out.
-          </p>
+        {/* Text + Small Circle Image */}
+        <div className="relative z-10 flex flex-col md:flex-row items-center md:items-start text-left text-black px-4 md:px-12 max-w-5xl">
+          {/* Text Section */}
+          <div className="flex-1">
+            <h1 className="text-5xl md:text-6xl font-extrabold mb-4">
+              Welcome to Evara Cosmetic Collection
+            </h1>
+            <p className="text-lg text-gray-700 leading-relaxed">
+              At <span className="font-semibold text-blue-600">Evara Beauty</span>, we
+              believe beauty is about confidence, elegance, and self-expression. 
+              We are proud to bring you a premium collection of{" "}
+              <span className="font-medium">trusted branded items</span> – 
+              from luxurious skincare to professional makeup essentials – all carefully selected to match your lifestyle. 
+              Whether you’re preparing for a special occasion or refreshing your daily look, 
+              we’re here to provide you with the best products and services that help you glow inside and out.
+            </p>
+          </div>
+
+          {/* Small Circle Image */}
+          <div className="mt-6 md:mt-0 md:ml-8 flex-shrink-0">
+            <img
+              src="/small_product.jpg" // replace with your small image
+              alt="small product"
+              className="w-40 h-40 rounded-full border-4 border-white shadow-lg object-cover"
+            />
+          </div>
         </div>
       </div>
 

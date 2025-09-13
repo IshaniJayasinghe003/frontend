@@ -53,7 +53,7 @@ export default function HomePage() {
       </div>
 
       {/* Our Collections Section */}
-      <div className="bg-white pt-4 pb-4"> {/* Reduced padding */}
+      <div className="bg-white pt-2 pb-4"> {/* Reduced padding */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-extrabold text-gray-900 mb-2 text-center"> {/* Reduced mb */}
             Our Collections
@@ -75,7 +75,7 @@ export default function HomePage() {
           />
           <div className="absolute inset-0 bg-black bg-opacity-40 flex flex-col items-center justify-center text-white opacity-0 group-hover:opacity-100 transition">
             <h3 className="text-lg font-semibold mb-2">Makeup Products</h3>
-            <button className="bg-pink-600 px-4 py-2 rounded-lg">See More →</button>
+           
           </div>
         </div>
 
@@ -88,7 +88,7 @@ export default function HomePage() {
           />
           <div className="absolute inset-0 bg-black bg-opacity-40 flex flex-col items-center justify-center text-white opacity-0 group-hover:opacity-100 transition">
             <h3 className="text-lg font-semibold mb-2">Hair Care Products</h3>
-            <button className="bg-pink-600 px-4 py-2 rounded-lg">See More →</button>
+            
           </div>
         </div>
 
@@ -101,7 +101,7 @@ export default function HomePage() {
           />
           <div className="absolute inset-0 bg-black bg-opacity-40 flex flex-col items-center justify-center text-white opacity-0 group-hover:opacity-100 transition">
             <h3 className="text-lg font-semibold mb-2">Personal Care</h3>
-            <button className="bg-pink-600 px-4 py-2 rounded-lg">See More →</button>
+           
           </div>
         </div>
 
@@ -114,7 +114,7 @@ export default function HomePage() {
           />
           <div className="absolute inset-0 bg-black bg-opacity-40 flex flex-col items-center justify-center text-white opacity-0 group-hover:opacity-100 transition">
             <h3 className="text-lg font-semibold mb-2">Fragrances</h3>
-            <button className="bg-pink-600 px-4 py-2 rounded-lg">See More →</button>
+           
           </div>
         </div>
 

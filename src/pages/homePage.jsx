@@ -6,7 +6,7 @@ export default function HomePage() {
         className="relative w-full h-screen bg-cover bg-center flex items-center px-12"
         style={{
           backgroundImage:
-            "url('/images/hero_bg.jpg')",
+            "url('../../public/hero_bg.jpg')",   
         }}
       > 
         {/* Overlay for dimming background */}

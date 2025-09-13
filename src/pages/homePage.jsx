@@ -9,7 +9,7 @@ export default function HomePage() {
       />
 
       {/* Overlay */}
-      <div className="absolute inset-0 bg-black bg-opacity-40"></div>
+      <div className="absolute inset-0 bg-white bg-opacity-40"></div>
 
       {/* Text Content */}
       <div className="relative text-center text-white px-4">

@@ -14,13 +14,13 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-white bg-opacity-40"></div>
 
         {/* Text + Circle Image */}
-        <div className="relative z-10 flex flex-1 max-w-7xl px-8 md:px-20">
+        <div className="relative z-10 flex flex-col md:flex-row max-w-7xl px-8 md:px-20 items-start">
           {/* Text Section */}
-          <div className="flex-1 pr-16"> {/* Right padding to separate text from circle */}
+          <div className="flex-1 pr-0 md:pr-16 mb-6 md:mb-0">
             <h1 className="text-5xl md:text-6xl font-extrabold mb-6">
               Welcome to Evara Collection
             </h1>
-            <p className="text-lg text-gray-700 leading-relaxed max-w-3xl">
+            <p className="text-lg text-gray-700 leading-relaxed max-w-3xl mb-6">
               At <span className="font-semibold text-blue-600">Evara Beauty</span>, we
               believe beauty is about confidence, elegance, and self-expression. 
               We are proud to bring you a premium collection of{" "}
@@ -29,23 +29,22 @@ export default function HomePage() {
               Whether you’re preparing for a special occasion or refreshing your daily look, 
               we’re here to provide you with the best products and services that help you glow inside and out.
             </p>
-          </div>
 
-          {/* Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4">
-            <button className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition">
-              See More
-            </button>
-            <button className="bg-pink-600 text-white px-6 py-3 rounded-lg hover:bg-pink-700 transition">
-              Contact Now
-            </button>
+            {/* Buttons */}
+            <div className="flex flex-col sm:flex-row gap-4">
+              <button className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition">
+                See More
+              </button>
+              <button className="bg-pink-600 text-white px-6 py-3 rounded-lg hover:bg-pink-700 transition">
+                Contact Now
+              </button>
+            </div>
           </div>
-        </div>
 
           {/* Circle Image */}
           <div className="flex-shrink-0 flex items-center">
             <img
-              src="/small_product.jpg" // replace with your small image
+              src="/small_product.jpg"
               alt="small product"
               className="w-80 h-80 md:w-96 md:h-96 rounded-full border-4 border-white shadow-xl object-cover"
             />
@@ -58,12 +57,12 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-extrabold text-gray-900 mb-4">Our Collections</h2>
           <p className="text-lg text-gray-600">
-            At Evara , We offer a wide range of Collections to help you look and feel your best.
+            At Evara, we offer a wide range of collections to help you look and feel your best.
           </p>
         </div>
       </div>
 
-      {/* Services Section */}
+      {/* Services Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 p-10 bg-white">
         {/* Service 1 */}
         <div className="relative group overflow-hidden rounded-lg shadow-lg">

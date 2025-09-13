@@ -2,7 +2,7 @@ export default function HomePage() {
   return (
     <div className="w-full relative flex flex-col bg-purple-100">
       {/* Hero Section */}
-      <div className="relative w-full h-screen flex items-center justify-start">
+      <div className="relative w-full h-screen flex items-center justify-start overflow-hidden">
         {/* Background Image */}
         <img
           src="/hero_bg.jpg"
@@ -16,7 +16,7 @@ export default function HomePage() {
         {/* Text + Circle Image */}
         <div className="relative z-10 flex flex-1 max-w-7xl px-8 md:px-20">
           {/* Text Section */}
-          <div className="flex-1 pr-16"> {/* Right padding to separate text from circle */}
+          <div className="flex-1 pr-16">
             <h1 className="text-5xl md:text-6xl font-extrabold mb-6">
               Welcome to Evara Cosmetic Collection
             </h1>
@@ -31,12 +31,13 @@ export default function HomePage() {
             </p>
           </div>
 
-          {/* Circle Image */}
-          <div className="flex-shrink-0 flex items-center">
+          {/* Floating Circle Image */}
+          <div className="flex-shrink-0 relative">
             <img
               src="/small_product.jpg" // replace with your small image
               alt="small product"
-              className="w-80 h-80 md:w-96 md:h-96 rounded-full border-4 border-white shadow-xl object-cover"
+              className="w-80 h-80 md:w-96 md:h-96 rounded-full border-4 border-white shadow-xl object-cover
+                         absolute top-1/2 transform -translate-y-1/2 -right-16 md:-right-24"
             />
           </div>
         </div>

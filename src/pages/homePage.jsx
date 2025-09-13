@@ -13,24 +13,35 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-white bg-opacity-40"></div>
 
         {/* Text Content */}
-        <div className="relative text-left text-white px-4">
-          <h1 className="text-6xl font-extrabold mb-4 text-pink-600">
-            Welcome to Evara Beauty
-          </h1>
-          <p className="text-2xl text-gray-800 mb-2">
-            A Full Beauty & Co Experience
-          </p>
-          <p className="text-lg text-gray-600 leading-relaxed max-w-2xl">
-            At <span className="font-semibold text-pink-600">Evara Beauty</span>, we
-            believe beauty is about confidence, elegance, and self-expression. 
-            We are proud to bring you a premium collection of <span className="font-medium">trusted branded items</span> – 
-            from luxurious skincare to professional makeup essentials – all carefully selected to match your lifestyle. 
-            Whether you’re preparing for a special occasion or refreshing your daily look, 
-            we’re here to provide you with the best products and services that help you glow inside and out.
-          </p>
+        <div className="relative flex items-center h-screen bg-gray-50 px-12">
+  {/* Left Side: Text */}
+  <div className="max-w-2xl text-left">
+    <h1 className="text-6xl font-extrabold mb-6 text-pink-600">
+      Welcome to Evara Beauty
+    </h1>
+    <p className="text-2xl text-gray-800 mb-4">
+      A Full Beauty & Co Experience
+    </p>
+    <p className="text-lg text-gray-600 leading-relaxed">
+      At <span className="font-semibold text-pink-600">Evara Beauty</span>, we
+      believe beauty is about confidence, elegance, and self-expression. 
+      We are proud to bring you a premium collection of <span className="font-medium">trusted branded items</span> – 
+      from luxurious skincare to professional makeup essentials – all carefully selected to match your lifestyle. 
+      Whether you’re preparing for a special occasion or refreshing your daily look, 
+      we’re here to provide you with the best products and services that help you glow inside and out.
+    </p>
+  </div>
+  </div>
 
-        </div>
-      </div>
+  {/* Right Side: Optional image or color */}
+  <div className="flex-1 h-full">
+    <img
+      src="/path-to-your-image.jpg"
+      alt="Beauty"
+      className="w-full h-full object-cover rounded-l-3xl"
+    />
+  </div>
+</div>
 
       {/* Services Section */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4 p-10 bg-white">

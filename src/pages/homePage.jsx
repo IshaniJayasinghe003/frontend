@@ -1,26 +1,33 @@
 export default function HomePage() {
   return (
-    <div className="w-full">
+    <div className="w-full relative h-screen flex items-center px-4 md:px-12">
       {/* Hero Section */}
-      <div
-        className="relative w-full h-screen bg-cover bg-center flex items-center justify-center"
-        style={{
-          backgroundImage:
-            "url('https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=1400&q=80')",
-        }}
-      >
-        {/* Overlay */}
-        <div className="absolute inset-0 bg-black bg-opacity-40"></div>
+      <img
+        src="/hero_bg.jpg"
+        alt="hero"
+        className="absolute inset-0 w-full h-full object-cover"
+      />
 
-        {/* Text Content */}
-        <div className="relative text-center text-white px-4">
-          <h1 className="text-6xl font-extrabold mb-4">Welcome</h1>
-          <p className="text-2xl">To a Full Beauty & Co Experience</p>
-        </div>
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-black bg-opacity-40"></div>
+
+      {/* Text Content */}
+      <div className="relative text-center text-white px-4">
+        <h1 className="text-6xl font-extrabold mb-4">
+          Welcome to Evara Cosmetic Collection
+        </h1>
+        <p className="text-lg text-gray-600 leading-relaxed max-w-2xl mx-auto">
+          At <span className="font-semibold text-blue-600">Evara Beauty</span>, we
+          believe beauty is about confidence, elegance, and self-expression. 
+          We are proud to bring you a premium collection of <span className="font-medium">trusted branded items</span> – 
+          from luxurious skincare to professional makeup essentials – all carefully selected to match your lifestyle. 
+          Whether you’re preparing for a special occasion or refreshing your daily look, 
+          we’re here to provide you with the best products and services that help you glow inside and out.
+        </p>
       </div>
 
       {/* Services Section */}
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 p-10 bg-white">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 p-10 bg-white mt-[100vh]">
         {/* Service 1 */}
         <div className="relative group overflow-hidden rounded-lg shadow-lg">
           <img

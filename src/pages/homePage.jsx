@@ -31,6 +31,17 @@ export default function HomePage() {
             </p>
           </div>
 
+          {/* Buttons */}
+          <div className="flex flex-col sm:flex-row gap-4">
+            <button className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition">
+              See More
+            </button>
+            <button className="bg-pink-600 text-white px-6 py-3 rounded-lg hover:bg-pink-700 transition">
+              Contact Now
+            </button>
+          </div>
+        </div>
+
           {/* Circle Image */}
           <div className="flex-shrink-0 flex items-center">
             <img
@@ -39,6 +50,16 @@ export default function HomePage() {
               className="w-80 h-80 md:w-96 md:h-96 rounded-full border-4 border-white shadow-xl object-cover"
             />
           </div>
+        </div>
+      </div>
+
+      {/* Services Section */}
+      <div className="bg-white py-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-extrabold text-gray-900 mb-4">Our Collections</h2>
+          <p className="text-lg text-gray-600">
+            At Evara , We offer a wide range of Collections to help you look and feel your best.
+          </p>
         </div>
       </div>
 

@@ -31,12 +31,13 @@ export default function HomePage() {
             </p>
           </div>
 
+
           {/* Small Circle Image */}
-          <div className="mt-6 md:mt-0 md:ml-8 flex-shrink-0">
+          <div className="mt-6 md:mt-0 md:ml-12 flex-shrink-0">
             <img
               src="/small_product.jpg" // replace with your small image
               alt="small product"
-              className="w-40 h-40 rounded-full border-4 border-white shadow-lg object-cover"
+              className="w-56 h-56 rounded-full border-4 border-white shadow-lg object-cover"
             />
           </div>
         </div>

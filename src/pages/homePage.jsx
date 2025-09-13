@@ -1,6 +1,6 @@
 export default function HomePage() {
   return (
-    <div className="w-full relative flex flex-col px-4 md:px-12">
+    <div className="w-full relative flex flex-col bg-purple-100">
       {/* Hero Section */}
       <div className="relative w-full h-screen flex items-center justify-start">
         {/* Background Image */}
@@ -13,14 +13,14 @@ export default function HomePage() {
         {/* Overlay */}
         <div className="absolute inset-0 bg-white bg-opacity-40"></div>
 
-        {/* Text + Small Circle Image */}
-        <div className="relative z-10 flex flex-col md:flex-row items-center md:items-start text-left text-black px-4 md:px-12 max-w-5xl">
+        {/* Text + Overlapping Circle Image */}
+        <div className="relative z-10 flex-1 max-w-6xl px-4 md:px-12">
           {/* Text Section */}
-          <div className="flex-1">
+          <div className="relative">
             <h1 className="text-5xl md:text-6xl font-extrabold mb-4">
               Welcome to Evara Cosmetic Collection
             </h1>
-            <p className="text-lg text-gray-700 leading-relaxed">
+            <p className="text-lg text-gray-700 leading-relaxed max-w-3xl">
               At <span className="font-semibold text-blue-600">Evara Beauty</span>, we
               believe beauty is about confidence, elegance, and self-expression. 
               We are proud to bring you a premium collection of{" "}
@@ -29,15 +29,12 @@ export default function HomePage() {
               Whether you’re preparing for a special occasion or refreshing your daily look, 
               we’re here to provide you with the best products and services that help you glow inside and out.
             </p>
-          </div>
 
-
-          {/* Small Circle Image */}
-          <div className="mt-14 md:mt-0 md:ml-12 flex-shrink-0">
+            {/* Circle Image overlapping right side */}
             <img
               src="/small_product.jpg" // replace with your small image
               alt="small product"
-              className="w-90 h-90 rounded-full border-4 border-white shadow-lg object-cover"
+              className="absolute top-1/2 right-0 transform -translate-y-1/2 w-64 h-64 rounded-full border-4 border-white shadow-xl object-cover"
             />
           </div>
         </div>

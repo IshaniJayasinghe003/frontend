@@ -6,7 +6,7 @@ export default function HomePage() {
         className="relative w-full h-screen bg-cover bg-center flex items-center px-12"
         style={{
           backgroundImage:
-            "url('https://img.freepik.com/free-photo/woman-holding-pink-beauty-moisturizer-her-hands_23-2151005575.jpg?t=st=1705180799~exp=1705184399~hmac=8f71409f4b29347d88df0a5ede88efee91fe33d50de6d79b9fc018b1bf2f5338')",
+            "url('/images/hero_bg.jpg')",
         }}
       > 
         {/* Overlay for dimming background */}

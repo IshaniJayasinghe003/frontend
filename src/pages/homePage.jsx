@@ -1,34 +1,78 @@
 export default function HomePage() {
   return (
-    <div className="flex items-center justify-between min-h-screen bg-gray-50 px-10">
-      
-      {/* Left Side - Text */}
-      <div className="w-1/2 pr-10">
-        <h1 className="text-4xl font-bold text-pink-600 mb-4">
-          Glow with Confidence
-        </h1>
-        <p className="text-2xl text-blue-500 mb-4">
-          Beauty that celebrates you!
-        </p>
-        <p className="text-lg text-gray-700 mb-6">
-          At <span className="font-semibold">[Your Brand Name]</span>, we believe
-          beauty is about self-expression and confidence. Explore our latest
-          collections and discover the glow that’s uniquely yours.
-        </p>
-        <button className="bg-pink-600 text-white px-6 py-3 rounded-lg shadow-lg hover:bg-pink-700 transition">
-          Shop Now
-        </button>
+    <div className="w-full">
+      {/* Hero Section */}
+      <div
+        className="relative w-full h-screen bg-cover bg-center flex items-center justify-center"
+        style={{
+          backgroundImage:
+            "url('https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=1400&q=80')",
+        }}
+      >
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-black bg-opacity-40"></div>
+
+        {/* Text Content */}
+        <div className="relative text-center text-white px-4">
+          <h1 className="text-6xl font-extrabold mb-4">Welcome</h1>
+          <p className="text-2xl">To a Full Beauty & Co Experience</p>
+        </div>
       </div>
 
-      {/* Right Side - Image */}
-      <div className="w-1/2">
-        <img
-          src="https://images.unsplash.com/photo-1616422276123-2ecb43f1f2d7?auto=format&fit=crop&w=800&q=80"
-          alt="Cosmetics Banner"
-          className="rounded-2xl shadow-lg w-full h-[500px] object-cover"
-        />
+      {/* Services Section */}
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 p-10 bg-white">
+        {/* Service 1 */}
+        <div className="relative group overflow-hidden rounded-lg shadow-lg">
+          <img
+            src="https://images.unsplash.com/photo-1583875762483-47a0c5f35a7d?auto=format&fit=crop&w=500&q=80"
+            alt="Facials"
+            className="w-full h-60 object-cover transform group-hover:scale-110 transition duration-500"
+          />
+          <div className="absolute inset-0 bg-black bg-opacity-40 flex flex-col items-center justify-center text-white opacity-0 group-hover:opacity-100 transition">
+            <h3 className="text-xl font-semibold mb-2">Facials</h3>
+            <button className="bg-pink-600 px-4 py-2 rounded-lg">Book Now →</button>
+          </div>
+        </div>
+
+        {/* Service 2 */}
+        <div className="relative group overflow-hidden rounded-lg shadow-lg">
+          <img
+            src="https://images.unsplash.com/photo-1600185365926-3a2e8db7d0d0?auto=format&fit=crop&w=500&q=80"
+            alt="Skincare"
+            className="w-full h-60 object-cover transform group-hover:scale-110 transition duration-500"
+          />
+          <div className="absolute inset-0 bg-black bg-opacity-40 flex flex-col items-center justify-center text-white opacity-0 group-hover:opacity-100 transition">
+            <h3 className="text-xl font-semibold mb-2">Skincare</h3>
+            <button className="bg-pink-600 px-4 py-2 rounded-lg">Book Now →</button>
+          </div>
+        </div>
+
+        {/* Service 3 */}
+        <div className="relative group overflow-hidden rounded-lg shadow-lg">
+          <img
+            src="https://images.unsplash.com/photo-1580130852049-97ebf2e4b4e6?auto=format&fit=crop&w=500&q=80"
+            alt="Makeup"
+            className="w-full h-60 object-cover transform group-hover:scale-110 transition duration-500"
+          />
+          <div className="absolute inset-0 bg-black bg-opacity-40 flex flex-col items-center justify-center text-white opacity-0 group-hover:opacity-100 transition">
+            <h3 className="text-xl font-semibold mb-2">Makeup</h3>
+            <button className="bg-pink-600 px-4 py-2 rounded-lg">Book Now →</button>
+          </div>
+        </div>
+
+        {/* Service 4 */}
+        <div className="relative group overflow-hidden rounded-lg shadow-lg">
+          <img
+            src="https://images.unsplash.com/photo-1506466010722-395aa2bef877?auto=format&fit=crop&w=500&q=80"
+            alt="Hair Care"
+            className="w-full h-60 object-cover transform group-hover:scale-110 transition duration-500"
+          />
+          <div className="absolute inset-0 bg-black bg-opacity-40 flex flex-col items-center justify-center text-white opacity-0 group-hover:opacity-100 transition">
+            <h3 className="text-xl font-semibold mb-2">Hair Care</h3>
+            <button className="bg-pink-600 px-4 py-2 rounded-lg">Book Now →</button>
+          </div>
+        </div>
       </div>
     </div>
   );
 }
-

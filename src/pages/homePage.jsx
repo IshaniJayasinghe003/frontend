@@ -13,11 +13,11 @@ export default function HomePage() {
         {/* Overlay */}
         <div className="absolute inset-0 bg-white bg-opacity-40"></div>
 
-        {/* Text + Overlapping Circle Image */}
-        <div className="relative z-10 flex-1 max-w-6xl px-4 md:px-12">
+        {/* Text + Circle Image */}
+        <div className="relative z-10 flex flex-1 max-w-7xl px-8 md:px-20">
           {/* Text Section */}
-          <div className="relative">
-            <h1 className="text-5xl md:text-6xl font-extrabold mb-4">
+          <div className="flex-1 pr-16"> {/* Right padding to separate text from circle */}
+            <h1 className="text-5xl md:text-6xl font-extrabold mb-6">
               Welcome to Evara Cosmetic Collection
             </h1>
             <p className="text-lg text-gray-700 leading-relaxed max-w-3xl">
@@ -29,12 +29,14 @@ export default function HomePage() {
               Whether you’re preparing for a special occasion or refreshing your daily look, 
               we’re here to provide you with the best products and services that help you glow inside and out.
             </p>
+          </div>
 
-            {/* Circle Image overlapping right side */}
+          {/* Circle Image */}
+          <div className="flex-shrink-0 flex items-center">
             <img
               src="/small_product.jpg" // replace with your small image
               alt="small product"
-              className="absolute top-1/2 right-0 transform -translate-y-1/2 w-64 h-64 rounded-full border-4 border-white shadow-xl object-cover"
+              className="w-80 h-80 md:w-96 md:h-96 rounded-full border-4 border-white shadow-xl object-cover"
             />
           </div>
         </div>

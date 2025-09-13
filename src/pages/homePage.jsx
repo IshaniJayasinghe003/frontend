@@ -16,11 +16,11 @@ export default function HomePage() {
         {/* Text + Circle Image */}
         <div className="relative z-10 flex flex-col md:flex-row max-w-7xl px-8 md:px-20 items-start">
           {/* Text Section */}
-          <div className="flex-1 pr-0 md:pr-16 mb-6 md:mb-0">
-            <h1 className="text-5xl md:text-6xl font-extrabold mb-6">
+          <div className="flex-1 pr-0 md:pr-16 mb-4 md:mb-0"> {/* Reduced margin bottom */}
+            <h1 className="text-5xl md:text-6xl font-extrabold mb-4"> {/* Reduced mb */}
               Welcome to Evara Collection
             </h1>
-            <p className="text-lg text-gray-700 leading-relaxed max-w-3xl mb-6">
+            <p className="text-lg text-gray-700 leading-relaxed max-w-3xl mb-4"> {/* Reduced mb */}
               At <span className="font-semibold text-blue-600">Evara Beauty</span>, we
               believe beauty is about confidence, elegance, and self-expression. 
               We are proud to bring you a premium collection of{" "}
@@ -31,7 +31,7 @@ export default function HomePage() {
             </p>
 
             {/* Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row gap-3"> {/* Reduced gap */}
               <button className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition">
                 See More
               </button>
@@ -52,18 +52,20 @@ export default function HomePage() {
         </div>
       </div>
 
-      {/* Services Section */}
-      <div className="bg-white py-8">
+      {/* Our Collections Section */}
+      <div className="bg-white pt-4 pb-4"> {/* Reduced padding */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-extrabold text-gray-900 mb-4">Our Collections</h2>
-          <p className="text-lg text-gray-600">
+          <h2 className="text-3xl font-extrabold text-gray-900 mb-2"> {/* Reduced mb */}
+            Our Collections
+          </h2>
+          <p className="text-lg text-gray-600 mb-3"> {/* Added mb for smaller gap above cards */}
             At Evara, we offer a wide range of collections to help you look and feel your best.
           </p>
         </div>
       </div>
 
       {/* Services Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 p-10 bg-white">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 p-4 bg-white"> {/* Reduced gap and padding */}
         {/* Service 1 */}
         <div className="relative group overflow-hidden rounded-lg shadow-lg">
           <img

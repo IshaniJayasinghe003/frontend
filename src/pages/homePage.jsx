@@ -12,8 +12,8 @@ export default function HomePage() {
         {/* Overlay */}
         <div className="absolute inset-0 bg-white bg-opacity-40"></div>
 
-        {/* Text Content (left aligned) */}
-        <div className="relative text-left text-black px-4 max-w-3xl">
+        {/* Text Content */}
+        <div className="relative text-center text-black px-4 max-w-3xl mx-auto">
           <h1 className="text-5xl md:text-6xl font-extrabold mb-4">
             Welcome to Evara Cosmetic Collection
           </h1>

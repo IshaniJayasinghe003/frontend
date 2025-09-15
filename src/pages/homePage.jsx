@@ -4,12 +4,9 @@ export default function HomePage() {
       {/* Hero Section */}
       <div className="relative w-full h-screen flex items-center justify-start">
         {/* Background Image */}
-        <img
-          src="/hero_bg.jpg"
-          alt="hero"
-          className="absolute inset-0 w-full h-full object-cover"
-        />
+       <div className="w-full h-screen bg-[url(./hero_bg.jpg)]bg-cover bg-center flex justify-center items-center"></div>
 
+        
         {/* Overlay */}
         <div className="absolute inset-0 bg-white bg-opacity-40"></div>
 
@@ -99,6 +96,7 @@ export default function HomePage() {
             alt="Personal Care"
             className="w-full h-60 object-cover transform group-hover:scale-110 transition duration-500"
           />
+
           <div className="absolute inset-0 bg-black bg-opacity-40 flex flex-col items-center justify-center text-white opacity-0 group-hover:opacity-100 transition">
             <h3 className="text-lg font-semibold mb-2">Personal Care</h3>
            
@@ -127,7 +125,7 @@ export default function HomePage() {
           />
           <div className="absolute inset-0 bg-black bg-opacity-40 flex flex-col items-center justify-center text-white opacity-0 group-hover:opacity-100 transition">
             <h3 className="text-lg font-semibold mb-2">Skincare Products</h3>
-            <button className="bg-pink-600 px-4 py-2 rounded-lg">See More →</button>
+            
           </div>
         </div>
       </div>

@@ -2,7 +2,7 @@ export default function HomePage() {
   return (
     <div className="w-full relative flex flex-col bg-purple-100">
       {/* Hero Section */}
-      <div className="relative w-full h-screen flex items-center justify-start">
+      <div className="relative w-full h-screen flex  justify-start">
         {/* Background Image */}
         <img
           src="/hero_bg.jpg"
@@ -10,7 +10,7 @@ export default function HomePage() {
           className="absolute inset-0 w-full h-full object-cover"
         />
 
-        <div className="w-full h-screen bg-[url(./loginbg.jpg)] bg-cover bg-center flex justify-center items-center"></div>
+       
         {/* Overlay */}
         <div className="absolute inset-0 bg-white bg-opacity-40"></div>
 

@@ -43,8 +43,8 @@ export default function HomePage() {
       </div>
 
       {/* Divider */}
-      <div className="h-16 bg-red">
-      <h1 className="text-5xl md:text-6xl font-extrabold mb-6">
+      <div className="h-16 bg-red-600">
+      <h1 className="text-5xl md:text-6xl font-bold mb-6 text-center">
               Our Collections
             </h1>  
       </div>
@@ -116,7 +116,7 @@ export default function HomePage() {
             <button className="bg-pink-600 px-4 py-2 rounded-lg">See More →</button>
           </div>
         </div>
-      </div>
+        </div>
     </div>
   );
 } 

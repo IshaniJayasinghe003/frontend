@@ -4,14 +4,13 @@ export default function HomePage() {
       {/* Hero Section */}
       <div className="relative w-full h-screen flex items-center justify-start">
         {/* Background Image */}
-       <div className="w-full h-screen bg-[url(./hero_bg.jpg)]bg-cover not-last-of-type:flex "></div>
+          <div className="relative w-full h-screen flex items-center justify-start bg-[url('./hero_bg.jpg')] bg-cover bg-center">
+          {/* Overlay */}
+          <div className="absolute inset-0 bg-white bg-opacity-40"></div>
 
-        
-        {/* Overlay */}
-        <div className="absolute inset-0 bg-white bg-opacity-40"></div>
-
-        {/* Text + Circle Image */}
-        <div className="relative z-10 flex flex-col md:flex-row max-w-7xl px-8 md:px-20 items-start">
+          {/* Text + Circle Image */}
+          <div className="relative z-10 flex flex-col md:flex-row max-w-7xl px-8 md:px-20 items-start">
+          </div>
           {/* Text Section */}
           <div className="flex-1 pr-0 md:pr-16 mb-4 md:mb-0"> {/* Reduced margin bottom */}
             <h1 className="text-5xl md:text-6xl font-extrabold mb-4"> {/* Reduced mb */}

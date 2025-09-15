@@ -4,7 +4,7 @@ export default function HomePage() {
       {/* Hero Section */}
       <div className="relative w-full h-screen flex items-center justify-start">
         {/* Background Image */}
-       <div className="w-full h-screen bg-[url(./hero_bg.jpg)]bg-cover bg-center flex "></div>
+       <div className="w-full h-screen bg-[url(./hero_bg.jpg)]bg-cover not-last-of-type:flex "></div>
 
         
         {/* Overlay */}

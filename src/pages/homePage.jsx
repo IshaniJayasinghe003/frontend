@@ -42,6 +42,14 @@ export default function HomePage() {
         </div>
       </div>
 
+      {/* Divider */}
+      <div className="h-16 bg-red">
+      <h1 className="text-5xl md:text-6xl font-extrabold mb-6">
+              Our Collections
+            </h1>  
+      </div>
+
+
       {/* Services Section */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 p-10 bg-white">
         {/* Service 1 */}

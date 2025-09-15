@@ -4,11 +4,7 @@ export default function HomePage() {
       {/* Hero Section */}
       <div className="relative w-full h-screen flex items-center justify-start">
         {/* Background Image */}
-        <img
-          src="/hero_bg.jpg"
-          alt="hero"
-          className="absolute inset-0 w-full h-full object-cover"
-        />
+        <img src="/hero_bg.jpg" alt="hero" />
 
         {/* Overlay */}
         <div className="absolute inset-0 bg-white bg-opacity-40"></div>
@@ -43,7 +39,7 @@ export default function HomePage() {
       </div>
 
       {/* Divider */}
-      <div className="h-16 bg-red-600">
+      <div className="h-16 bg-red">
       <h1 className="text-5xl md:text-6xl font-bold mb-6 text-center">
               Our Collections
             </h1>  

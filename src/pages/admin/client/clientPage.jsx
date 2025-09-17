@@ -1,4 +1,4 @@
-// ClientWebPage.jsx
+
 import { Route, Routes } from "react-router-dom";
 import Header from "../../../components/header";
 import ProductPage from "./productPage";

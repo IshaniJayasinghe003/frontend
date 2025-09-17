@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 
+
+
 export default function HomePage() {
   // Products array (can later fetch from backend)
   const products = [

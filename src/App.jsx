@@ -6,7 +6,8 @@ import HomePage from "./pages/homePage";
 import AdminPage from "./pages/adminPage";
  import TestPage from "./pages/testPage";
  import { Toaster } from "react-hot-toast"; 
-import ClientWebPage from "./pages/client/clientPage";
+import ClientWebPage from "./pages/client/ClientWebPage";
+
  import { GoogleOAuthProvider } from "@react-oauth/google";
  import ForgetPasswordPage from "./pages/client/forgetPassword";
 

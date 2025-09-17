@@ -1,7 +1,7 @@
 export default function HomePage() {
   return (
     <div className="w-full h-screen flex justify-center items-center">
-      <span className="text-3xl text-left text-accent">Evara Cosmetics that Everyone loves</span>
+      <span className="text-3xl font-bold text-start text-accent">Evara Cosmetics that Everyone loves</span>
     
     </div>
   )

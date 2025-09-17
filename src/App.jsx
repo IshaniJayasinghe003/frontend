@@ -6,9 +6,9 @@ import RegisterPage from "./pages/registerPage";
 import AdminPage from "./pages/adminPage";
 import TestPage from "./pages/testPage";
 import { Toaster } from "react-hot-toast";
-import ClientWebPage from "./pages/client/clientPage"; 
+import ClientWebPage from "./pages/admin/client/clientPage"; 
 import { GoogleOAuthProvider } from "@react-oauth/google";
-import ForgetPasswordPage from "./pages/client/forgetPassword";
+import ForgetPasswordPage from "./pages/admin/client/forgetPassword";
 
 const clientId =
   "1086978250852-q498jik4ukaq8q6m66ar26dgt6chjv24.apps.googleusercontent.com";

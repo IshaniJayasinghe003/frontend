@@ -19,17 +19,16 @@ return (
 <div className="w-full h-screen flex justify-center items-center bg-primary text-secondary"> 
 <Toaster position="top-right" />
  <Routes>
- <Route path="/" element={<HomePage />} />
- <Route path="/login" element={<LoginPage />} /> 
-<Route path="/test" element={<TestPage />} />
- <Route path="/register" element={<RegisterPage />} /> 
-<Route path="/admin/*" element={<AdminPage />} />
- <Route path="/forget" element={<ForgetPasswordPage />} /> 
-<Route path="/*" element={<ClientWebPage />} /> 
+      <Route path="/" element={<HomePage />} />
+      <Route path="/login" element={<LoginPage />} /> 
+      <Route path="/test" element={<TestPage />} />
+      <Route path="/register" element={<RegisterPage />} /> 
+      <Route path="/admin/*" element={<AdminPage />} />
+      <Route path="/forget" element={<ForgetPasswordPage />} /> 
+      <Route path="/*" element={<ClientWebPage />} /> 
 </Routes> 
 </div> 
 </BrowserRouter> 
-
 </GoogleOAuthProvider> ); 
 } 
 export default App;

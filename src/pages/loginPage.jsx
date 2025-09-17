@@ -67,7 +67,7 @@ export default function LoginPage() {
 
     return (
         <div className="w-full h-screen  bg-cover bg-center flex justify-center items-center"
-            style={{ backgroundImage: "url('https://pbwpvdsxnkfkvpoaejgy.supabase.co/storage/v1/object/public/images/1755248853929-cake.jpg')" }}>
+            style={{ backgroundImage: "url('https://pbwpvdsxnkfkvpoaejgy.supabase.co/storage/v1/object/public/images/hero_bg.jpg')" }}>
             <div className="w-[500px] h-[500px] backdrop-blur-sm shadow-2xl rounded-[30px] relative gap-[20px] text-white flex flex-col items-center justify-center">
                 <h1 className="absolute top-[20px] text-2xl font-bold text-center my-5">Login</h1>
                 <div className="w-[350px]  flex flex-col    ">

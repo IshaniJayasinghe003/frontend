@@ -9,7 +9,7 @@ export default function HomePage() {
         altNames: ["Nail Color", "Varnish"],
         labelledPrice: 900,
         price: 750,
-        images: ["/images/nail_polish.jpg"],
+        images: "url('https://pbwpvdsxnkfkvpoaejgy.supabase.co/storage/v1/object/public/images/30183ecf-e104-4a47-a563-2f18e625a1201628762081691-Lakme-Women-Nail-Polish-3131628762081590-1.jpg')",
         description: "Quick-drying nail polish available in multiple shades.",
         stock: 100,
         isAvailable: true,

@@ -21,7 +21,7 @@ export default function HomePage() {
     <div className="w-full bg-white">
 
       {/* Hero Section */}
-      <div className="flex flex-col md:flex-row items-center justify-center min-h-screen px-12 gap-12">
+      <div className="flex flex-col md:flex-row items-center justify-center h-[85vh] px-12 gap-12">
         
         {/* Left Column: Text + Button + Nail Polish Image */}
         <div className="w-full md:w-1/2 max-w-xl text-center md:text-left">
@@ -36,11 +36,8 @@ export default function HomePage() {
           </button>
 
           {/* Small divider for spacing check */}
-          <div className="w-20 h-1 bg-pink-600 my-4">
-            </div>
-          </div>
-
-          
+          <div className="w-20 h-1 bg-pink-600 my-4"></div>
+        </div>
 
         {/* Right Column: Hero Background Image */}
         <div className="w-full md:w-1/2 flex justify-center items-center">
@@ -50,7 +47,7 @@ export default function HomePage() {
       </div>
 
       {/* Featured Products Section */}
-      <div className="w-full px-12 pt-4 pb-8 bg-white">
+      <div className="w-full px-12 pt-2 pb-6 bg-white"> {/* Reduced pt-4 → pt-2 and pb-8 → pb-6 */}
         <h2 className="text-3xl font-bold mb-4">Featured Products</h2>
         <div className="flex overflow-x-auto gap-6 pb-4 snap-x snap-mandatory">
           {products.map((product) => (

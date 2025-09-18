@@ -27,7 +27,7 @@ export default function HomePage() {
     <h1 className="text-4xl font-bold text-accent mb-4">
       Evara Cosmetics that Everyone Loves
     </h1>
-    <p className="text-lg text-gray-600 mb-4"> {/* reduced mb-6 → mb-4 */}
+    <p className="text-lg text-gray-600 mb-2"> {/* reduced mb-6 → mb-4 */}
       Discover premium beauty products crafted with care and loved by
       everyone. Enhance your style with Evara Cosmetics.
     </p>
@@ -38,7 +38,7 @@ export default function HomePage() {
 </div>
 
 {/* Featured Products Section */}
-<div className="w-full px-12 py-8 bg-white"> {/* reduced py-12 → py-8 */}
+<div className="w-full px-12 py-4 bg-white"> {/* reduced py-12 → py-8 */}
   <h2 className="text-3xl font-bold mb-6">Featured Products</h2>
   <div className="flex overflow-x-auto gap-6 pb-4 snap-x snap-mandatory">
     {products.map((product) => (

@@ -38,7 +38,8 @@ export default function HomePage() {
   </div>
 
   {/*divider*/ }
-  <div className="w-full h-1 bg-pink-600"></div>
+ <div className="w-px h-1/2 bg-gray-300 mx-auto"></div>
+
 
   {/* Featured Products Section */}
   <div className="w-full px-12 pt-4 pb-4 bg-white">

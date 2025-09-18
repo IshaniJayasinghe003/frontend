@@ -21,14 +21,14 @@ export default function HomePage() {
     <div className="w-full bg-white">
 
       {/* Hero Section */}
-      <div className="flex flex-col md:flex-row items-center justify-center h-[85vh] px-12 gap-12">
+      <div className="flex flex-col md:flex-row items-center justify-center h-[80vh] px-12 gap-12">
         
         {/* Left Column: Text + Button + Nail Polish Image */}
         <div className="w-full md:w-1/2 max-w-xl text-center md:text-left">
-          <h1 className="text-4xl font-bold text-accent mb-4">
+          <h1 className="text-4xl font-bold text-accent mb-3">
             Evara Cosmetics that Everyone Loves
           </h1>
-          <p className="text-lg text-gray-600 mb-4">
+          <p className="text-lg text-gray-600 mb-3">
             Discover premium beauty products crafted with care and loved by everyone. Enhance your style with Evara Cosmetics.
           </p>
           <button className="px-10 py-4 bg-pink-500 text-white text-lg font-semibold rounded-full shadow-lg hover:bg-pink-600 hover:scale-105 transition-transform duration-300">
@@ -36,7 +36,10 @@ export default function HomePage() {
           </button>
 
           {/* Small divider for spacing check */}
-          <div className="w-20 h-1 bg-pink-600 my-4"></div>
+          <div className="w-16 h-1 bg-pink-600 my-2"></div>
+
+          {/* Nail Polish Image below button */}
+          <img src="/nail.jpg" alt="Nail Polish" className="w-28 rounded-lg shadow-lg" />
         </div>
 
         {/* Right Column: Hero Background Image */}
@@ -47,8 +50,8 @@ export default function HomePage() {
       </div>
 
       {/* Featured Products Section */}
-      <div className="w-full px-12 pt-2 pb-6 bg-white"> {/* Reduced pt-4 → pt-2 and pb-8 → pb-6 */}
-        <h2 className="text-3xl font-bold mb-4">Featured Products</h2>
+      <div className="w-full px-12 pt-1 pb-4 bg-white">
+        <h2 className="text-3xl font-bold mb-3">Featured Products</h2>
         <div className="flex overflow-x-auto gap-6 pb-4 snap-x snap-mandatory">
           {products.map((product) => (
             <div key={product.productId} className="snap-start flex-shrink-0">

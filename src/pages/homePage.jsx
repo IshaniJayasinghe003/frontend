@@ -21,13 +21,13 @@ export default function HomePage() {
     <div className="w-full bg-white">
 
       {/* Hero Section */}
-      <div className="flex flex-col md:flex-row items-center justify-center min-h-screen px-12 gap-12">
+      <div className="flex flex-col md:flex-row items-center px-12 pt-12 pb-8 gap-12">
         {/* Left Column: Text + Button */}
-        <div className="w-full md:w-1/2 max-w-xl text-center md:text-left">
+        <div className="w-full md:w-1/2 max-w-xl">
           <h1 className="text-4xl font-bold text-accent mb-4">
             Evara Cosmetics that Everyone Loves
           </h1>
-          <p className="text-lg text-gray-600 mb-4">
+          <p className="text-lg text-gray-600 mb-2">
             Discover premium beauty products crafted with care and loved by everyone. Enhance your style with Evara Cosmetics.
           </p>
           <button className="px-10 py-4 bg-pink-500 text-white text-lg font-semibold rounded-full shadow-lg hover:bg-pink-600 hover:scale-105 transition-transform duration-300">
@@ -35,10 +35,12 @@ export default function HomePage() {
           </button>
         </div>
 
-        {/* Right Column: Hero Image */}
-        <div className="w-full md:w-1/2 flex justify-center items-center">
-          <img src="/hero_bg.jpg" alt="Hero Cosmetics" className="w-full max-w-lg rounded-lg shadow-lg" />
-        </div>
+        {/* Right Column: Hero Image + Nail Polish Image */}
+        <div className="w-full md:w-1/2 flex flex-col items-center">
+          <img src="/hero_bg.jpg" alt="Hero Cosmetics" className="w-full rounded-lg shadow-lg mb-4" />
+          
+         
+          </div>
       </div>
 
       {/* Featured Products Section */}

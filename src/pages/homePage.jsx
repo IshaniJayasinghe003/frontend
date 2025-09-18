@@ -22,12 +22,12 @@ export default function HomePage() {
   <div className="w-full h-full bg-white">
 
   {/* Hero Section */}
-  <div className="w-full flex justify-start items-center px-12 pt-12 pb-8">
+  <div className="w-full flex justify-start items-center px-12 pt-12 pb-4">
     <div className="max-w-xl">
       <h1 className="text-4xl font-bold text-accent mb-4">
         Evara Cosmetics that Everyone Loves
       </h1>
-      <p className="text-lg text-gray-600 mb-1">
+      <p className="text-lg text-gray-600 mb-2">
         Discover premium beauty products crafted with care and loved by
         everyone. Enhance your style with Evara Cosmetics.
       </p>
@@ -38,7 +38,7 @@ export default function HomePage() {
   </div>
 
   {/* Featured Products Section */}
-  <div className="w-full px-12 pt-2 pb-4 bg-white">
+  <div className="w-full px-12 pt-4 pb-4 bg-white">
     <h2 className="text-3xl font-bold mb-4">Featured Products</h2>
     <div className="flex overflow-x-auto gap-6 pb-4 snap-x snap-mandatory">
       {products.map((product) => (

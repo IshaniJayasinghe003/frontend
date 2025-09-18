@@ -41,7 +41,7 @@ export default function HomePage() {
           
           {/* Small divider for spacing */}
           <div className="w-20 h-1 bg-pink-600 mb-2"></div>
-          </div>
+</div>
       </div>
 
       {/* Featured Products Section */}

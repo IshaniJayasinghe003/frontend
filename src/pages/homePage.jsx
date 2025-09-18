@@ -19,7 +19,7 @@ export default function HomePage() {
   ];
 
   return (
-    <div className="w-full bg-amber-100">
+    <div className="w-full h-full bg-white">
   {/* Hero Section */}
   <div className="w-full h-full flex justify-start items-center px-12 py-20 ">
     <div className="max-w-xl">
@@ -36,8 +36,11 @@ export default function HomePage() {
     </div>
   </div>
 
+  {/* right side image */ }
+  <div className=""></div>
+
  {/* Featured Products Section */}
-<div className="w-full px-12 py-12 bg-amber-100">
+<div className="w-full px-12 py-12 bg-white">
   <h2 className="text-3xl font-bold mb-6">Featured Products</h2>
   <div className="flex overflow-x-auto gap-6 pb-4 snap-x snap-mandatory">
     {products.map((product) => (

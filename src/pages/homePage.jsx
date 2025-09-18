@@ -36,16 +36,23 @@ export default function HomePage() {
     </div>
   </div>
 
-  {/* Featured Products Section */}
-  <div className="w-full px-12 py-12">
-    <h2 className="text-3xl font-bold mb-6">Featured Products</h2>
-    <div className="flex overflow-x-auto gap-6 pb-4">
-      {products.map((product) => (
-        <ProductCard key={product.productId} product={product} />
-      ))}
-    </div>
+ {/* Featured Products Section */}
+<div className="w-full px-12 py-12">
+  <h2 className="text-3xl font-bold mb-6">Featured Products</h2>
+  <div className="flex overflow-x-auto gap-6 pb-4 snap-x snap-mandatory">
+    {products.map((product) => (
+      <div
+        key={product.productId}
+        className="snap-start flex-shrink-0"
+      >
+        <ProductCard product={product} />
+      </div>
+    ))}
   </div>
 </div>
+
+    </div>
+ 
 
   );
 }

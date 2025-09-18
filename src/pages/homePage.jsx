@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-
 export default function HomePage() {
   return (
     <div className="w-full h-screen flex justify-start items-center px-12">
@@ -13,9 +12,10 @@ export default function HomePage() {
         </p>
         <Link
           to="/products"
-          className="inline-flex items-center gap-3 px-10 py-4 bg-pink-500 text-white text-lg font-semibold rounded-full shadow-lg hover:bg-pink-600 hover:scale-105 transition-transform duration-300">
+          className="inline-block px-10 py-4 bg-pink-500 text-white text-lg font-semibold rounded-full shadow-lg hover:bg-pink-600 hover:scale-105 transition-transform duration-300"
+        >
           Explore Products
-     </Link>
+        </Link>
       </div>
     </div>
   );

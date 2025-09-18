@@ -38,7 +38,16 @@ export default function HomePage() {
   </div>
 
   {/*divider*/ }
- <div className="w-px h-1/2 bg-gray-300 mx-auto"></div>
+ <div className="w-1/2 h-1 bg-gray-200"></div>
+
+ {/*right side image*/}
+ <div className="w-full flex justify-end items-center px-12 pt-12 pb-4">
+    <div className="max-w-xl">
+      <img
+        src="/hero_bg.jpg"
+        alt="Evara Cosmetics"
+        className="w-full h-auto"/>
+    </div>
 
 
   {/* Featured Products Section */}
@@ -53,6 +62,7 @@ export default function HomePage() {
     </div>
   </div>
 
+</div>
 </div>
 
   );

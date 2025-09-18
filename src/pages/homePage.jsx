@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowRight } from "lucide-react";
+
 export default function HomePage() {
   return (
     <div className="w-full h-screen flex justify-start items-center px-12">
@@ -15,8 +15,7 @@ export default function HomePage() {
           to="/products"
           className="inline-flex items-center gap-3 px-10 py-4 bg-pink-500 text-white text-lg font-semibold rounded-full shadow-lg hover:bg-pink-600 hover:scale-105 transition-transform duration-300">
           Explore Products
-          <ArrowRight size={22} className="ml-1" />
-        </Link>
+     </Link>
       </div>
     </div>
   );

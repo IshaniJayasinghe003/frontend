@@ -37,6 +37,9 @@ export default function HomePage() {
     </div>
   </div>
 
+  {/*divider*/ }
+  <div className="w-full h-1 bg-pink-600"></div>
+
   {/* Featured Products Section */}
   <div className="w-full px-12 pt-4 pb-4 bg-white">
     <h2 className="text-3xl font-bold mb-4">Featured Products</h2>

@@ -37,9 +37,7 @@ export default function HomePage() {
           {/* Small divider for spacing check */}
           <div className="w-20 h-0.5 bg-pink-600 my-2"></div>
 
-          {/* Nail Polish Image below button */}
-          <img src="/nail.jpg" alt="Nail Polish" className="w-32 rounded-lg shadow-lg" />
-        </div>
+         
 
         {/* Right Column: Hero Image */}
         <div className="w-1/2">

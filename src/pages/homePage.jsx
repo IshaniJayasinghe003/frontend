@@ -19,7 +19,7 @@ export default function HomePage() {
   ];
 
   return (
-    <div className="w-full min-h-screen bg-gray-100">
+    <div className="w-full  bg-gray-100">
   {/* Hero Section */}
   <div className="w-full flex justify-start items-center px-12 py-20 bg-white">
     <div className="max-w-xl">

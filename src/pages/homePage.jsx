@@ -36,11 +36,11 @@ export default function HomePage() {
           </button>
 
           {/* Small divider for spacing check */}
-          <div className="w-20 h-1 bg-pink-600 my-4"></div>
+          <div className="w-20 h-1 bg-pink-600 my-4">
+            </div>
+          </div>
 
-          {/* Nail Polish Image below the button */}
-          <img src="/nail.jpg" alt="Nail Polish" className="w-32 rounded-lg shadow-lg" />
-        </div>
+          
 
         {/* Right Column: Hero Background Image */}
         <div className="w-full md:w-1/2 flex justify-center items-center">

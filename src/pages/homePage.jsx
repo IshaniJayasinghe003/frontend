@@ -1,4 +1,4 @@
-import ProductCard from "../components/productCard"; // adjust path
+import ProductCard from "../components/productCard";
 import React from "react";
 
 export default function HomePage() {
@@ -21,9 +21,9 @@ export default function HomePage() {
     <div className="w-full bg-white">
 
       {/* Hero Section */}
-      <div className="flex items-center px-12 pt-12 pb-8 gap-12">
-        {/* Left Column: Text + Button + Divider + Nail Polish Image */}
-        <div className="w-1/2 max-w-xl">
+      <div className="flex flex-col md:flex-row items-center px-12 pt-12 pb-8 gap-12">
+        {/* Left Column: Text + Button */}
+        <div className="w-full md:w-1/2 max-w-xl">
           <h1 className="text-4xl font-bold text-accent mb-4">
             Evara Cosmetics that Everyone Loves
           </h1>
@@ -33,15 +33,17 @@ export default function HomePage() {
           <button className="px-10 py-4 bg-pink-500 text-white text-lg font-semibold rounded-full shadow-lg hover:bg-pink-600 hover:scale-105 transition-transform duration-300">
             Explore Products
           </button>
+        </div>
 
-          {/* Small divider for spacing check */}
-          <div className="w-20 h-0.5 bg-pink-600 my-2"></div>
+        {/* Right Column: Hero Image + Nail Polish Image */}
+        <div className="w-full md:w-1/2 flex flex-col items-center">
+          <img src="/hero_bg.jpg" alt="Hero Cosmetics" className="w-full rounded-lg shadow-lg mb-4" />
+          
+          {/* Small divider for spacing */}
+          <div className="w-20 h-1 bg-pink-600 mb-2"></div>
 
-         
-
-        {/* Right Column: Hero Image */}
-        <div className="w-1/2">
-          <img src="/hero_bg.jpg" alt="Hero Cosmetics" className="w-full rounded-lg shadow-lg" />
+          {/* Nail Polish Image below the hero image */}
+          <img src="/nail.jpg" alt="Nail Polish" className="w-32 rounded-lg shadow-lg" />
         </div>
       </div>
 
@@ -55,7 +57,6 @@ export default function HomePage() {
             </div>
           ))}
         </div>
-      </div>
       </div>
 
     </div>

@@ -39,8 +39,7 @@ export default function HomePage() {
         <div className="w-full md:w-1/2 flex flex-col items-center">
           <img src="/hero_bg.jpg" alt="Hero Cosmetics" className="w-full rounded-lg shadow-lg mb-4" />
           
-          {/* Small divider for spacing */}
-          <div className="w-20 h-1 bg-pink-600 mb-2"></div>
+         
           </div>
       </div>
 

@@ -41,7 +41,10 @@ export default function HomePage() {
           
           {/* Small divider for spacing */}
           <div className="w-20 h-1 bg-pink-600 mb-2"></div>
-</div>
+
+          {/* Nail Polish Image below the hero image */}
+          <img src="/nail.jpg" alt="Nail Polish" className="w-32 rounded-lg shadow-lg" />
+        </div>
       </div>
 
       {/* Featured Products Section */}

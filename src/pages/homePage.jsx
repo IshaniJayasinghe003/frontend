@@ -21,7 +21,7 @@ export default function HomePage() {
   return (
     <div className="w-full  h-full">
   {/* Hero Section */}
-  <div className="w-full flex justify-start items-center px-12 py-20 bg-white">
+  <div className="w-full flex justify-start items-center px-12 py-20 ">
     <div className="max-w-xl">
       <h1 className="text-4xl font-bold text-accent mb-4">
         Evara Cosmetics that Everyone Loves

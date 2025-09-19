@@ -15,6 +15,19 @@ export default function HomePage() {
       isAvailable: true,
       category: "cosmetics"
     },
+    {
+  productId: "COS011",
+  name: "Lip Gloss",
+  altNames: ["Shiny Lipstick", "Glossy Tint"],
+  labelledPrice: 1500,
+  price: 1300,
+  images: ["/images/lip_gloss.jpg"],
+  description: "Non-sticky lip gloss for a glossy and plump look.",
+  stock: 60,
+  isAvailable: true,
+  category: "cosmetics"
+},
+
   ];
 
   return (
@@ -36,10 +49,8 @@ export default function HomePage() {
           </button>
 
           {/* Small divider for spacing check */}
-          <div className="w-16 h-1 bg-pink-600 my-2"></div>
-
-          {/* Nail Polish Image below button */}
-          <img src="/nail.jpg" alt="Nail Polish" className="w-28 rounded-lg shadow-lg" />
+          <div className="w-16 h-1 bg-pink-600 my-2">
+          </div>
         </div>
 
         {/* Right Column: Hero Background Image */}

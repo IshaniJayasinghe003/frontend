@@ -16,20 +16,19 @@ export default function HomePage() {
       <div className="absolute left-10 top-1/2 -translate-y-1/2 text-white z-20 max-w-md animate-fadeIn">
         
         {/* Website Name */}
-        <div className="text-6xl font-bold font-Raleway mb-4 drop-shadow-xl">
+        <div className="text-6xl font-bold font-poppins mb-4 drop-shadow-xl">
           Evara Cosmetics
         </div>
 
         {/* Tagline */}
         <h1 className="text-3xl font-serif italic mb-4">
-          Glow Naturally, Shine Confidently
+          Luxury Skincare, Everyday Confidence
         </h1>
 
         {/* Paragraph */}
         <p className="text-lg leading-relaxed mb-6 text-gray-200">
-          Discover premium beauty products crafted with natural ingredients.
-          From nourishing skincare to vibrant makeup, Evara helps you embrace
-          elegance, radiance, and confidence every day.
+          Evara Cosmetics offers a range of products for all your beauty needs. 
+          Whether for daily use or special looks, find your favorite branded cosmetics here.
         </p>
 
         {/* Call-to-Action Button */}

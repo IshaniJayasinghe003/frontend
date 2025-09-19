@@ -43,7 +43,7 @@ export default function HomePage() {
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 text-center">
           
           <div className="p-6 bg-white rounded-lg shadow hover:shadow-lg transition">
-            <img src="/cos.jpeg" alt="Premium Quality" className="w-16 h-16 mx-auto mb-4"/>
+            <img src="cos.jpeg" alt="Premium Quality" className="w-16 h-16 mx-auto mb-4"/>
             <h3 className="font-poppins font-semibold mb-2">Premium Quality</h3>
             <p className="text-gray-600 text-sm">Only the best branded cosmetics to ensure your confidence and style.</p>
           </div>

@@ -28,12 +28,10 @@ export default function HomePage() {
             Find your favorites and elevate your style every day.
           </p>
 
-          <button 
-            onClick={() => window.location.href="/products"} 
-            className="px-8 py-3 bg-pink-500 text-white font-poppins font-semibold rounded-full shadow-lg hover:bg-pink-600 transition"
-          >
-            Shop Now
-          </button>
+          {/* Scroll Indicator */}
+          <div className="mt-6 text-gray-300 text-sm animate-bounce">
+            ↓ Scroll to Discover More
+          </div>
         </div>
       </div>
 

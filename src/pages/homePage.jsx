@@ -16,7 +16,7 @@ export default function HomePage() {
       <div className="absolute left-10 top-1/2 -translate-y-1/2 text-white z-20 max-w-md animate-fadeIn">
         
         {/* Website Name */}
-        <div className="text-6xl font-bold font-serif mb-4 drop-shadow-xl">
+        <div className="text-6xl font-bold font-Raleway mb-4 drop-shadow-xl">
           Evara Cosmetics
         </div>
 

@@ -3,7 +3,7 @@ export default function HomePage() {
     <div className="w-full">
 
       {/* Hero Section */}
-      <div className="relative w-full h-screen flex">
+      <div className="relative w-full h-[90vh] flex">
         <img 
           src="face.jpg" 
           alt="Hero" 

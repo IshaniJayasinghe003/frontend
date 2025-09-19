@@ -35,8 +35,6 @@ export default function HomePage() {
             Explore Products
           </button>
 
-          {/* Small divider just for spacing check */}
-          <div className="w-16 h-1 bg-pink-600 my-2"></div>
         </div>
 
         {/* Right Column: Hero Background Image */}

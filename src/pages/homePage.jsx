@@ -29,7 +29,7 @@ export default function HomePage() {
           </p>
 
           {/* Scroll Indicator */}
-          <div className="mt-6 text-gray-300 text-sm animate-bounce">
+          <div className="mt-6 text-gray-300 text-xl font-semibold animate-bounce">
             ↓ Scroll to Discover More
           </div>
         </div>
@@ -69,7 +69,7 @@ export default function HomePage() {
         <p className="mb-6">Explore our full collection of premium cosmetics and find your favorites today.</p>
         <button 
           onClick={() => window.location.href="/products"} 
-          className="px-8 py-3 bg-white text-pink-500 font-semibold rounded-full shadow-lg hover:bg-gray-100 transition"
+          className="px-8 py-3 bg-white text-secondary font-semibold rounded-full shadow-lg hover:bg-gray-100 transition"
         >
           Shop Now
         </button>

@@ -15,19 +15,6 @@ export default function HomePage() {
       isAvailable: true,
       category: "cosmetics"
     },
-    {
-  productId: "COS011",
-  name: "Lip Gloss",
-  altNames: ["Shiny Lipstick", "Glossy Tint"],
-  labelledPrice: 1500,
-  price: 1300,
-  images: ["/images/lip_gloss.jpg"],
-  description: "Non-sticky lip gloss for a glossy and plump look.",
-  stock: 60,
-  isAvailable: true,
-  category: "cosmetics"
-},
-
   ];
 
   return (
@@ -36,7 +23,7 @@ export default function HomePage() {
       {/* Hero Section */}
       <div className="flex flex-col md:flex-row items-center justify-center h-[80vh] px-12 gap-12">
         
-        {/* Left Column: Text + Button + Nail Polish Image */}
+        {/* Left Column: Text + Button */}
         <div className="w-full md:w-1/2 max-w-xl text-center md:text-left">
           <h1 className="text-4xl font-bold text-accent mb-3">
             Evara Cosmetics that Everyone Loves
@@ -48,9 +35,8 @@ export default function HomePage() {
             Explore Products
           </button>
 
-          {/* Small divider for spacing check */}
-          <div className="w-16 h-1 bg-pink-600 my-2">
-          </div>
+          {/* Small divider just for spacing check */}
+          <div className="w-16 h-1 bg-pink-600 my-2"></div>
         </div>
 
         {/* Right Column: Hero Background Image */}
@@ -61,7 +47,7 @@ export default function HomePage() {
       </div>
 
       {/* Featured Products Section */}
-      <div className="w-full px-12 pt-1 pb-4 bg-white">
+      <div className="w-full px-12 pt-2 pb-6 bg-white">
         <h2 className="text-3xl font-bold mb-3">Featured Products</h2>
         <div className="flex overflow-x-auto gap-6 pb-4 snap-x snap-mandatory">
           {products.map((product) => (

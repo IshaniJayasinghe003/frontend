@@ -21,7 +21,7 @@ export default function HomePage() {
         </div>
 
         {/* Tagline */}
-        <h1 className="text-3xl font-light italic mb-4">
+        <h1 className="text-3xl font-serif italic mb-4">
           Glow Naturally, Shine Confidently
         </h1>
 

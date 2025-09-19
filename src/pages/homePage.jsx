@@ -37,12 +37,15 @@ export default function HomePage() {
 
         </div>
 
-        {/* Right Column: Hero Background Image */}
-        <div className="w-full md:w-1/2 flex flex-col justify-center items-center">
-          <img src="/hero_bg.jpg" alt="Hero Cosmetics" className="w-full max-w-lg rounded-lg shadow-lg" />
-        </div>
-
+       {/* Right Column: Hero Background Image */}
+      <div className="w-full md:w-1/2 flex justify-center">
+        <img 
+          src="/hero_bg.jpg" 
+          alt="Hero Cosmetics" 
+          className="max-w-md w-full object-contain rounded-lg shadow-lg mx-auto"
+        />
       </div>
+    </div>
 
       {/* Featured Products Section */}
       <div className="w-full px-12 pt-2 pb-6 bg-white">

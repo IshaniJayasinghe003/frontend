@@ -6,7 +6,7 @@ import ProductOverViewPage from "./productOverView";
 import CartPage from "./cart";
 import CheckoutPage from "./checkoutPage";
 import HomePage from "../../homePage";
-import AboutUsPage from "./aboutUsPage";
+import AboutUsPage from "../../aboutUsPage";
 
 export default function ClientWebPage() {
     return (

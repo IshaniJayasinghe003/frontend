@@ -49,13 +49,13 @@ export default function HomePage() {
           </div>
 
           <div className="p-6 bg-white rounded-lg shadow hover:shadow-lg transition">
-            <img src="/brands.png" alt="Trusted Brands" className="w-16 h-16 mx-auto mb-4"/>
+            <img src="bran.jpg" alt="Trusted Brands" className="w-16 h-16 mx-auto mb-4"/>
             <h3 className="font-poppins font-semibold mb-2">Trusted Brands</h3>
             <p className="text-gray-600 text-sm">Curated selection of globally recognized and trusted cosmetics brands.</p>
           </div>
 
           <div className="p-6 bg-white rounded-lg shadow hover:shadow-lg transition">
-            <img src="/delivery.png" alt="Fast Delivery" className="w-16 h-16 mx-auto mb-4"/>
+            <img src="deli.webp" alt="Fast Delivery" className="w-16 h-16 mx-auto mb-4"/>
             <h3 className="font-poppins font-semibold mb-2">Fast Delivery</h3>
             <p className="text-gray-600 text-sm">Quick and reliable delivery so you can enjoy your products sooner.</p>
           </div>
@@ -69,7 +69,7 @@ export default function HomePage() {
         <p className="mb-6">Explore our full collection of premium cosmetics and find your favorites today.</p>
         <button 
           onClick={() => window.location.href="/products"} 
-          className="px-8 py-3 bg-white text-secondary font-semibold rounded-full shadow-lg hover:bg-gray-100 transition"
+          className="px-8 py-3 bg-white text-black font-semibold rounded-full shadow-lg hover:bg-gray-100 transition"
         >
           Shop Now
         </button>

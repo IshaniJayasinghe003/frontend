@@ -7,7 +7,7 @@ export default function HomePage() {
         <img 
           src="face.jpg" 
           alt="Hero" 
-          className="w-full h-full object-cover" 
+          className="w-full min-h-[90vh] object-cover" 
         />
 
         {/* Gradient Overlay */}

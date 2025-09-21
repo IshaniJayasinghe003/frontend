@@ -3,7 +3,7 @@ export default function HomePage() {
     <div className="w-full">
 
       {/* Hero Section */}
-      <div className="relative w-full min-h-[90vh] flex">
+      <div className="relative w-full h-full flex">
         <img 
           src="blush.jpg" 
           alt="Hero" 

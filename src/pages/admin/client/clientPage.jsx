@@ -30,7 +30,7 @@ export default function ClientWebPage() {
 
                     <Route 
                     path="/about-us" 
-                    element={<h1 className="text-3xl text-center">About Us Page</h1>} 
+                    element={<AboutUsPage/>} 
                     />
 
                     <Route 

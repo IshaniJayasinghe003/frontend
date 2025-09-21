@@ -49,13 +49,13 @@ export default function HomePage() {
           </div>
 
           <div className="p-6 bg-white rounded-lg shadow hover:shadow-lg transition">
-            <img src="bran.jpg" alt="Trusted Brands" className="w-16 h-16 mx-auto mb-4"/>
+            <img src="bran.jpg" alt="Trusted Brands" className="w-100 h-60 mx-auto mb-4"/>
             <h3 className="font-poppins font-semibold mb-2">Trusted Brands</h3>
             <p className="text-gray-600 text-sm">Curated selection of globally recognized and trusted cosmetics brands.</p>
           </div>
 
           <div className="p-6 bg-white rounded-lg shadow hover:shadow-lg transition">
-            <img src="deli.webp" alt="Fast Delivery" className="w-16 h-16 mx-auto mb-4"/>
+            <img src="deli.webp" alt="Fast Delivery" className="w-100 h-60 mx-auto mb-4"/>
             <h3 className="font-poppins font-semibold mb-2">Fast Delivery</h3>
             <p className="text-gray-600 text-sm">Quick and reliable delivery so you can enjoy your products sooner.</p>
           </div>

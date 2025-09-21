@@ -9,7 +9,7 @@ import HomePage from "../../homePage";
 
 export default function ClientWebPage() {
     return (
-        <div className="w-full h-screen max-h-screen">
+        <div className="w-full min-h-screen">
             <Header />
             <div className="w-full h-[calc(100%-100px)] ">
                 <Routes path="/">

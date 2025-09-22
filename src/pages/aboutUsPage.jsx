@@ -17,7 +17,7 @@ export default function AboutUsPage() {
 
       {/* Transparent White Card */}
       <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2
-                      bg-white/50 backdrop-blur-md rounded-3xl shadow-2xl 
+                      bg-white/30 backdrop-blur-md rounded-3xl shadow-2xl 
                       p-10 max-w-lg text-center">
         {/* All content centered */}
         <h1 className="text-4xl font-bold text-gray-800 mb-4">About Evara</h1>
@@ -29,11 +29,11 @@ export default function AboutUsPage() {
         </p>
 
         {/* Bullet Points */}
-        <ul className="list-disc text-gray-600 pl-5 mb-6 space-y-2 inline-block text-left">
-          <li>🌿 <span className="text-pink-400 font-medium">100% Authentic & Premium Brands</span></li>
-          <li>✨ <span className="text-pink-400 font-medium">Cruelty-Free & Sustainable</span></li>
-          <li>💖 <span className="text-pink-400 font-medium">Empowering Confidence & Beauty</span></li>
-          <li>🚚 <span className="text-pink-400 font-medium">Fast & Reliable Delivery</span></li>
+        <ul className=" pl-5 mb-6 space-y-2 inline-block text-left">
+          <li>🌿 <span className="text-black-400 font-medium">100% Authentic & Premium Brands</span></li>
+          <li>✨ <span className="text-blackk-400 font-medium">Cruelty-Free & Sustainable</span></li>
+          <li>💖 <span className="text-blackk-400 font-medium">Empowering Confidence & Beauty</span></li>
+          <li>🚚 <span className="text-blackk-400 font-medium">Fast & Reliable Delivery</span></li>
         </ul>
 
         {/* Navigate to Product Page */}

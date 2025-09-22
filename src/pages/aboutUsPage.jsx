@@ -1,35 +1,19 @@
-"use client"
-import { motion } from "framer-motion"
-
 export default function AboutUsPage() {
   return (
     <div className="w-full min-h-screen flex flex-col md:flex-row items-center justify-center px-8 py-16 
     bg-gradient-to-r from-pink-50 via-white to-purple-50">
       
       {/* Left Side - Images */}
-      <motion.div 
-        initial={{ opacity: 0, x: -50 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 1 }}
-        className="md:w-1/2 w-full flex flex-col items-center mb-8 md:mb-0"
-      >
+      <div className="md:w-1/2 w-full flex flex-col items-center mb-8 md:mb-0">
         {/* Big Image */}
-        <motion.img 
+        <img 
           src="usp.webp" 
           alt="Evara Cosmetics Main" 
           className="rounded-2xl shadow-lg w-full max-w-md object-cover mb-6"
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1, delay: 0.2 }}
         />
 
         {/* Two Small Images in One Row */}
-        <motion.div 
-          className="flex gap-4 w-full max-w-md"
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.4 }}
-        >
+        <div className="flex gap-4 w-full max-w-md">
           <img 
             src="bran.jpg" 
             alt="Evara Cosmetics Small 1" 
@@ -40,16 +24,11 @@ export default function AboutUsPage() {
             alt="Evara Cosmetics Small 2" 
             className="rounded-xl shadow-md w-1/2 object-cover"
           />
-        </motion.div>
-      </motion.div>
+        </div>
+      </div>
       
       {/* Right Side - Info */}
-      <motion.div 
-        initial={{ opacity: 0, x: 50 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 1, delay: 0.6 }}
-        className="md:w-1/2 w-full md:pl-12 text-center md:text-left space-y-4"
-      >
+      <div className="md:w-1/2 w-full md:pl-12 text-center md:text-left space-y-4">
         <h1 className="text-4xl font-bold mb-6 text-gray-800">About Evara</h1>
         
         <p className="text-xl font-semibold text-gray-700 leading-relaxed">
@@ -74,7 +53,7 @@ export default function AboutUsPage() {
         <p className="text-gray-700 font-medium">
           Discover beauty that feels as good as it looks — only at <span className="text-pink-600">Evara</span>.
         </p>
-      </motion.div>
+      </div>
     </div>
   )
 }

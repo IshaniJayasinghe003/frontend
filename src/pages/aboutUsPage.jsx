@@ -2,26 +2,41 @@ export default function AboutUsPage() {
   return (
     <div className="w-full min-h-screen flex flex-col md:flex-row items-center justify-center px-8 py-16 bg-gray-50">
       
-      {/* Left Side - Image */}
-      <div className="md:w-1/2 w-full flex justify-center mb-8 md:mb-0">
+      {/* Left Side - Images */}
+      <div className="md:w-1/2 w-full flex flex-col items-center mb-8 md:mb-0">
+        {/* Big Image */}
         <img 
-          src="abus.jpg" 
-          alt="Evara Cosmetics" 
-          className="rounded-2xl shadow-lg w-full max-w-md object-cover"
+          src="usp.webp" 
+          alt="Evara Cosmetics Main" 
+          className="rounded-2xl shadow-lg w-full max-w-md object-cover mb-6"
         />
+
+        {/* Two Small Images in One Row */}
+        <div className="flex gap-4 w-full max-w-md">
+          <img 
+            src="bran.jpg" 
+            alt="Evara Cosmetics Small 1" 
+            className="rounded-xl shadow-md w-1/2 object-cover"
+          />
+          <img 
+            src="cos.jpeg" 
+            alt="Evara Cosmetics Small 2" 
+            className="rounded-xl shadow-md w-1/2 object-cover"
+          />
+        </div>
       </div>
       
       {/* Right Side - Info */}
       <div className="md:w-1/2 w-full md:pl-12 text-center md:text-left">
-        <h1 className="text-4xl font-bold mb-6 text-white-800">About Evara</h1>
+        <h1 className="text-4xl font-bold mb-6 text-gray-800">About Evara</h1>
         
-        <p className="text-xl text-bold text-gray-700 mb-4 leading-relaxed">
+        <p className="text-xl font-semibold text-gray-700 mb-4 leading-relaxed">
           Welcome to <span className="font-semibold">Evara Cosmetics</span>!  
           We are dedicated to bringing you a curated selection of premium 
           skincare, makeup, haircare, and wellness products.
         </p>
 
-        <p className="text-lg text-bold text-gray-600 mb-4 leading-relaxed">
+        <p className="text-lg text-gray-600 mb-4 leading-relaxed">
           Our mission is simple: to empower your natural beauty with trusted 
           brands that are safe, sustainable, and effective. At Evara, we 
           believe in self-care, confidence, and conscious beauty.

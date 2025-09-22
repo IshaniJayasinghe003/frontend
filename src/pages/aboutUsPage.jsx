@@ -13,7 +13,7 @@ export default function AboutUsPage() {
 
       {/* Transparent White Card */}
       <div className="absolute top-1/2 right-10 transform -translate-y-1/2 
-                      bg-white/70 backdrop-blur-md rounded-2xl shadow-2xl 
+                      bg-white/90 backdrop-blur-md rounded-2xl shadow-2xl 
                       p-8 max-w-md text-center">
         {/* All content centered */}
         <h1 className="text-4xl font-bold text-gray-800 mb-4">About Us</h1>

@@ -5,26 +5,19 @@ export default function AboutUsPage() {
       
       {/* Left Side - Images */}
       <div className="md:w-1/2 w-full flex flex-col items-center mb-8 md:mb-0">
-        {/* Big Image */}
+        {/* Big Cover Image */}
         <img 
           src="usp.webp" 
-          alt="Evara Cosmetics Main" 
+          alt="Evara Cosmetics Cover" 
           className="rounded-2xl shadow-lg w-full max-w-md object-cover mb-6"
         />
 
-        {/* Two Small Images in One Row */}
-        <div className="flex gap-4 w-full max-w-md">
-          <img 
-            src="bran.jpg" 
-            alt="Evara Cosmetics Small 1" 
-            className="rounded-xl shadow-md w-1/2 object-cover"
-          />
-          <img 
-            src="cos.jpeg" 
-            alt="Evara Cosmetics Small 2" 
-            className="rounded-xl shadow-md w-1/2 object-cover"
-          />
-        </div>
+        {/* Small Image */}
+        <img 
+          src="small.webp" 
+          alt="Evara Cosmetics Small" 
+          className="rounded-xl shadow-md w-2/3 max-w-sm object-cover"
+        />
       </div>
       
       {/* Right Side - Info */}

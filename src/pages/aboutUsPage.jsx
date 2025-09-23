@@ -8,7 +8,7 @@ export default function AboutUsPage() {
       {/* Left Side - Image */}
       <div className="w-1/2 h-full">
         <img
-          src="usp.webp"
+          src="face.jpg"
           alt="Evara Cosmetics Cover"
           className="w-full h-full object-cover"
         />

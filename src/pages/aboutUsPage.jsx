@@ -15,6 +15,13 @@ export default function AboutUsPage() {
       </div>
 
       {/* Right Side - Transparent Card */}
+      <div className="w-1/2 h-full">
+        <img
+          src="bran.jpg"
+          alt="Evara Cosmetics Cover"
+          className="w-full h-full object-cover"
+        />
+      </div>
       <div className="w-1/2 flex justify-center items-center p-8">
         <div className="bg-white/40 backdrop-blur-md rounded-3xl shadow-2xl p-10 max-w-md text-center">
           <h1 className="text-4xl font-bold text-black-800 mb-4">About Evara</h1>

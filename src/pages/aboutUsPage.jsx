@@ -17,14 +17,14 @@ export default function AboutUsPage() {
 
       {/* Transparent White Card */}
       <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2
-                      bg-white/30 backdrop-blur-md rounded-3xl shadow-2xl 
+                      bg-white/20 backdrop-blur-md rounded-3xl shadow-2xl 
                       p-10 max-w-lg text-center">
         {/* All content centered */}
-        <h1 className="text-4xl font-bold text-gray-800 mb-4">About Evara</h1>
-        <p className="text-lg text-gray-700 mb-4">
+        <h1 className="text-4xl font-bold text-black-800 mb-4">About Evara</h1>
+        <p className="text-lg text-black-700 mb-4">
           We are dedicated to bringing you a curated selection of premium skincare, makeup, haircare, and wellness products.
         </p>
-        <p className="text-gray-600 mb-4">
+        <p className="text-black-600 mb-4">
           Our mission is simple: to empower your natural beauty with trusted brands that are safe, sustainable, and effective. At Evara, we believe in self-care, confidence, and conscious beauty.
         </p>
 

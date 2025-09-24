@@ -1,4 +1,4 @@
-import { Phone, Mail, MessageCircle } from "lucide-react";
+import { FaPhone, FaEnvelope, FaWhatsapp } from "react-icons/fa";
 
 export default function ContactUsPage() {
   return (
@@ -8,7 +8,7 @@ export default function ContactUsPage() {
         {/* Heading */}
         <h1 className="text-3xl font-bold text-gray-800 mb-4">Get in Touch</h1>
         <p className="text-gray-600 mb-8">
-          We’re here to help! Reach us easily through WhatsApp, phone, or email.
+          You can contact us through WhatsApp, phone, or email.
         </p>
 
         {/* Contact Options */}
@@ -16,34 +16,34 @@ export default function ContactUsPage() {
           
           {/* WhatsApp */}
           <a
-            href="https://wa.me/94771234567"
+            href="https://wa.me/94711234567"
             target="_blank"
             rel="noopener noreferrer"
             className="flex flex-col items-center p-6 bg-green-50 rounded-xl shadow hover:shadow-md transition"
           >
-            <MessageCircle className="w-10 h-10 text-green-600 mb-3" />
+            <FaWhatsapp className="w-10 h-10 text-green-600 mb-3" />
             <h2 className="text-lg font-semibold text-gray-800">WhatsApp</h2>
             <p className="text-gray-600 text-sm">Chat with us directly</p>
           </a>
 
           {/* Phone */}
           <a
-            href="tel:+94771234567"
+            href="tel:+94711234567"
             className="flex flex-col items-center p-6 bg-blue-50 rounded-xl shadow hover:shadow-md transition"
           >
-            <Phone className="w-10 h-10 text-blue-600 mb-3" />
+            <FaPhone className="w-10 h-10 text-blue-600 mb-3" />
             <h2 className="text-lg font-semibold text-gray-800">Call Us</h2>
-            <p className="text-gray-600 text-sm">+94 77 123 4567</p>
+            <p className="text-gray-600 text-sm">+94 71 123 4567</p>
           </a>
 
           {/* Email */}
           <a
-            href="mailto:info@yourcompany.com"
+            href="mailto:info@evara.com"
             className="flex flex-col items-center p-6 bg-pink-50 rounded-xl shadow hover:shadow-md transition"
           >
-            <Mail className="w-10 h-10 text-pink-600 mb-3" />
+            <FaEnvelope className="w-10 h-10 text-pink-600 mb-3" />
             <h2 className="text-lg font-semibold text-gray-800">Email</h2>
-            <p className="text-gray-600 text-sm">info@yourcompany.com</p>
+            <p className="text-gray-600 text-sm">info@evara.com</p>
           </a>
         </div>
 

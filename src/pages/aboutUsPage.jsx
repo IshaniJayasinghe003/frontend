@@ -4,25 +4,30 @@ export default function AboutUsPage() {
   const navigate = useNavigate();
 
   return (
-    <div className="w-full h-screen flex">
-      {/* Left Side - Image */}
-      <div className="w-full h-full">
-        <img
-          src="face.jpg"
-          alt="Evara Cosmetics Cover"
-          className="w-full h-full object-cover"
-        />
-      </div>
+    <div className="w-full h-screen relative">
+      {/* Full Background Image */}
+      <img
+        src="face.jpg"
+        alt="Evara Cosmetics Cover"
+        className="w-full h-full object-cover absolute top-0 left-0 z-0"
+      />
 
-      {/* Right Side - Transparent Card */}
-      <div className="w-1/2 flex justify-center items-center p-8">
+      {/* Center Card */}
+      <div className="relative z-10 flex justify-center items-center w-full h-full">
         <div className="bg-white/40 backdrop-blur-md rounded-3xl shadow-2xl p-10 max-w-md text-center">
-          <h1 className="text-4xl font-bold text-black-800 mb-4">About Evara</h1>
-          <p className="text-lg font-semibold text-black-700 mb-4">
+          {/* Optional Image inside Card */}
+          <img
+            src="usp.webp"
+            alt="Evara Logo"
+            className="w-24 h-24 mx-auto mb-4 rounded-full object-cover shadow-lg"
+          />
+
+          <h1 className="text-4xl font-bold text-gray-900 mb-4">About Evara</h1>
+          <p className="text-lg font-semibold text-gray-800 mb-4">
             We are dedicated to bringing you a curated selection of premium
             skincare, makeup, haircare, and wellness products.
           </p>
-          <p className="text-black-600 mb-4">
+          <p className="text-gray-700 mb-4">
             Our mission is simple: to empower your natural beauty with trusted
             brands that are safe, sustainable, and effective. At Evara, we
             believe in self-care, confidence, and conscious beauty.
@@ -30,36 +35,16 @@ export default function AboutUsPage() {
 
           {/* Bullet Points */}
           <ul className="pl-5 mb-6 space-y-2 inline-block text-left">
-            <li>
-              🌿{" "}
-              <span className="text-black-500 font-medium">
-                100% Authentic & Premium Brands
-              </span>
-            </li>
-            <li>
-              ✨{" "}
-              <span className="text-black-500 font-medium">
-                Cruelty-Free & Sustainable
-              </span>
-            </li>
-            <li>
-              💖{" "}
-              <span className="text-black-500 font-medium">
-                Empowering Confidence & Beauty
-              </span>
-            </li>
-            <li>
-              🚚{" "}
-              <span className="text-black-500 font-medium">
-                Fast & Reliable Delivery
-              </span>
-            </li>
+            <li>🌿 <span className="text-gray-800 font-medium">100% Authentic & Premium Brands</span></li>
+            <li>✨ <span className="text-gray-800 font-medium">Cruelty-Free & Sustainable</span></li>
+            <li>💖 <span className="text-gray-800 font-medium">Empowering Confidence & Beauty</span></li>
+            <li>🚚 <span className="text-gray-800 font-medium">Fast & Reliable Delivery</span></li>
           </ul>
 
           {/* Navigate to Product Page */}
           <button
             onClick={() => navigate("/products")}
-            className="bg-white-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-white-700 transition"
+            className="bg-pink-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-pink-700 transition"
           >
             Explore Products
           </button>

@@ -1,9 +1,72 @@
 export default function ReviewsPage() {
+  const reviews = [
+    {
+      name: "Sophia Williams",
+      rating: 5,
+      comment: "Amazing products! The quality is top-notch and delivery was super fast.",
+    },
+    {
+      name: "Liam Johnson",
+      rating: 4,
+      comment: "Really good service. Packaging was neat. Would love to see more offers!",
+    },
+  ];
+
   return (
-    <div className="w-full h-screen flex items-center justify-center bg-gray-50">
-      <span className="text-2xl font-semibold text-gray-800">
-        Reviews Page
-      </span>
+    <div className="w-full min-h-screen flex flex-col items-center bg-gray-50 py-12 px-4">
+      {/* Title */}
+      <h1 className="text-3xl font-bold text-gray-800 mb-8">Customer Reviews</h1>
+
+      {/* Reviews */}
+      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 w-full max-w-6xl mb-12">
+        {reviews.map((review, index) => (
+          <div
+            key={index}
+            className="bg-white shadow-md rounded-2xl p-6 hover:shadow-lg transition"
+          >
+            <div className="flex items-center justify-between mb-4">
+              <h2 className="text-lg font-semibold text-gray-700">{review.name}</h2>
+              <div className="flex text-yellow-500">
+                {Array.from({ length: review.rating }).map((_, i) => (
+                  <span key={i}>⭐</span>
+                ))}
+              </div>
+            </div>
+            <p className="text-gray-600">{review.comment}</p>
+          </div>
+        ))}
+      </div>
+
+      {/* Leave a Review Form */}
+      <div className="w-full max-w-lg bg-white shadow-md rounded-2xl p-6">
+        <h2 className="text-xl font-semibold text-gray-800 mb-4">Leave a Review</h2>
+        <form className="flex flex-col gap-4">
+          <input
+            type="text"
+            placeholder="Your Name"
+            className="border border-gray-300 rounded-lg p-2"
+          />
+          <select className="border border-gray-300 rounded-lg p-2">
+            <option value="">Select Rating</option>
+            <option value="5">⭐⭐⭐⭐⭐</option>
+            <option value="4">⭐⭐⭐⭐</option>
+            <option value="3">⭐⭐⭐</option>
+            <option value="2">⭐⭐</option>
+            <option value="1">⭐</option>
+          </select>
+          <textarea
+            placeholder="Write your review..."
+            className="border border-gray-300 rounded-lg p-2"
+            rows="4"
+          ></textarea>
+          <button
+            type="submit"
+            className="bg-blue-600 text-white rounded-lg py-2 hover:bg-blue-700 transition"
+          >
+            Submit Review
+          </button>
+        </form>
+      </div>
     </div>
   );
 }

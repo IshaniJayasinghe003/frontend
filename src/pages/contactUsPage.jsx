@@ -1,51 +1,55 @@
+import { Phone, Mail, MessageCircle } from "lucide-react";
+
 export default function ContactUsPage() {
   return (
-    <div className="w-full min-h-screen bg-gradient-to-b from-pink-200 to-pink-400 flex flex-col items-center justify-center px-4">
-      
-      {/* Header */}
-      <div className="text-center mb-12">
-        <h1 className="text-4xl md:text-5xl font-bold text-white mb-2">Contact Evara</h1>
-        <p className="text-white/90 md:text-lg">
-          You can contact us through <span className="font-semibold">WhatsApp</span>, 
-          <span className="font-semibold"> Phone Call</span>, or send us an <span className="font-semibold">Email</span>.
-        </p>
-      </div>
-
-      {/* Contact Options */}
-      <div className="bg-white/80 backdrop-blur-md rounded-3xl shadow-2xl p-8 md:p-12 text-center space-y-6">
+    <div className="w-full min-h-screen bg-gradient-to-br from-pink-50 via-white to-pink-100 flex items-center justify-center p-6">
+      <div className="max-w-3xl w-full bg-white shadow-lg rounded-2xl p-10 text-center">
         
-        {/* Phone */}
-        <p className="text-gray-700 text-lg">
-          📞 <a href="tel:+94711234567" className="text-pink-600 font-semibold hover:underline">
-            +94 71 123 4567
-          </a>
-        </p>
-        <p className="text-gray-700 text-lg">
-          📞 <a href="tel:+94769876543" className="text-pink-600 font-semibold hover:underline">
-            +94 76 987 6543
-          </a>
+        {/* Heading */}
+        <h1 className="text-3xl font-bold text-gray-800 mb-4">Get in Touch</h1>
+        <p className="text-gray-600 mb-8">
+          We’re here to help! Reach us easily through WhatsApp, phone, or email.
         </p>
 
-        {/* WhatsApp */}
-        <p className="text-gray-700 text-lg">
-          💬 <a 
-            href="https://wa.me/94711234567" 
-            target="_blank" 
-            rel="noopener noreferrer" 
-            className="text-green-600 font-semibold hover:underline"
+        {/* Contact Options */}
+        <div className="grid md:grid-cols-3 gap-6">
+          
+          {/* WhatsApp */}
+          <a
+            href="https://wa.me/94771234567"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex flex-col items-center p-6 bg-green-50 rounded-xl shadow hover:shadow-md transition"
           >
-            Chat with us on WhatsApp
+            <MessageCircle className="w-10 h-10 text-green-600 mb-3" />
+            <h2 className="text-lg font-semibold text-gray-800">WhatsApp</h2>
+            <p className="text-gray-600 text-sm">Chat with us directly</p>
           </a>
-        </p>
 
-        {/* Email */}
-        <p className="text-gray-700 text-lg">
-          ✉️ <a 
-            href="mailto:info@evara.com" 
-            className="text-blue-600 font-semibold hover:underline"
+          {/* Phone */}
+          <a
+            href="tel:+94771234567"
+            className="flex flex-col items-center p-6 bg-blue-50 rounded-xl shadow hover:shadow-md transition"
           >
-            info@evara.com
+            <Phone className="w-10 h-10 text-blue-600 mb-3" />
+            <h2 className="text-lg font-semibold text-gray-800">Call Us</h2>
+            <p className="text-gray-600 text-sm">+94 77 123 4567</p>
           </a>
+
+          {/* Email */}
+          <a
+            href="mailto:info@yourcompany.com"
+            className="flex flex-col items-center p-6 bg-pink-50 rounded-xl shadow hover:shadow-md transition"
+          >
+            <Mail className="w-10 h-10 text-pink-600 mb-3" />
+            <h2 className="text-lg font-semibold text-gray-800">Email</h2>
+            <p className="text-gray-600 text-sm">info@yourcompany.com</p>
+          </a>
+        </div>
+
+        {/* Extra Note */}
+        <p className="mt-10 text-gray-500 text-sm">
+          Available daily from <span className="font-semibold">9 AM - 6 PM</span>
         </p>
       </div>
     </div>

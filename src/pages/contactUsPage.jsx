@@ -2,8 +2,19 @@ import { FaPhone, FaEnvelope, FaWhatsapp } from "react-icons/fa";
 
 export default function ContactUsPage() {
   return (
-    <div className="w-full min-h-screen bg-gradient-to-br from-pink-50 via-white to-pink-100 flex items-center justify-center p-6">
-      <div className="max-w-3xl w-full bg-white shadow-lg rounded-2xl p-10 text-center">
+    <div className="w-full min-h-screen bg-gradient-to-br from-pink-50 via-white to-pink-100 flex flex-col items-center justify-center p-6">
+      
+      {/* Cover Image */}
+      <div className="w-full max-w-3xl mb-6">
+        <img
+          src="cos.webp" // <-- replace with your image path
+          alt="Contact Us Cover"
+          className="w-full h-56 object-cover rounded-2xl shadow-md"
+        />
+      </div>
+
+      {/* Contact Card */}
+      <div className="max-w-3xl w-full bg-[#ffe5ec] shadow-lg rounded-2xl p-10 text-center">
         
         {/* Heading */}
         <h1 className="text-3xl font-bold text-gray-800 mb-4">Get in Touch</h1>
@@ -22,7 +33,7 @@ export default function ContactUsPage() {
             className="flex flex-col items-center p-6 bg-green-50 rounded-xl shadow hover:shadow-md transition"
           >
             <FaWhatsapp className="w-10 h-10 text-green-600 mb-3" />
-            <h2 className="text-lg font-semibold text-gray-800">WhatsApp</h2>
+            <h2 className="text-lg font-bold text-gray-800">WhatsApp</h2>
             <p className="text-gray-600 text-sm">Chat with us directly</p>
           </a>
 
@@ -32,7 +43,7 @@ export default function ContactUsPage() {
             className="flex flex-col items-center p-6 bg-blue-50 rounded-xl shadow hover:shadow-md transition"
           >
             <FaPhone className="w-10 h-10 text-blue-600 mb-3" />
-            <h2 className="text-lg font-semibold text-gray-800">Call Us</h2>
+            <h2 className="text-lg font-bold text-gray-800">Call Us</h2>
             <p className="text-gray-600 text-sm">+94 71 123 4567</p>
           </a>
 
@@ -42,14 +53,14 @@ export default function ContactUsPage() {
             className="flex flex-col items-center p-6 bg-pink-50 rounded-xl shadow hover:shadow-md transition"
           >
             <FaEnvelope className="w-10 h-10 text-pink-600 mb-3" />
-            <h2 className="text-lg font-semibold text-gray-800">Email</h2>
+            <h2 className="text-lg font-bold text-gray-800">Email</h2>
             <p className="text-gray-600 text-sm">info@evara.com</p>
           </a>
         </div>
 
         {/* Extra Note */}
-        <p className="mt-10 text-gray-500 text-sm">
-          Available daily from <span className="font-semibold">9 AM - 6 PM</span>
+        <p className="mt-10 text-black-500 text-sm">
+          Available daily from <span className="font-bold">9 AM - 6 PM</span>
         </p>
       </div>
     </div>

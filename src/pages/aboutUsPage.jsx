@@ -13,10 +13,10 @@ export default function AboutUsPage() {
       />
 
       {/* Center Card with side margin */}
-      <div className="relative z-10 flex justify-start items-center w-full h-full">
+      <div className="relative z-10 flex justify-center items-center w-full h-full">
         <div
-          className="rounded-3xl shadow-2xl p-10 max-w-md text-center mx-8 bg-cover bg-center relative"
-          style={{ backgroundImage: "url('brush.jpg')" }} // 👈 image for card background
+          className="rounded-3xl shadow-2xl p-12 w-96 md:w-[500px] lg:w-[600px] text-center mx-8 bg-cover bg-center relative"
+          style={{ backgroundImage: "url('brush.jpg')" }}
         >
           {/* Overlay for readability */}
           <div className="absolute inset-0 bg-white/50 backdrop-blur-sm rounded-3xl"></div>
@@ -35,7 +35,7 @@ export default function AboutUsPage() {
             </p>
 
             {/* Bullet Points */}
-            <ul className="pl-5 mb-6 space-y-2 inline-block text-left">
+            <ul className="pl-5 mb-6 font-bold space-y-2 inline-block text-left">
               <li>🌿 <span className="text-gray-800 font-medium">100% Authentic & Premium Brands</span></li>
               <li>✨ <span className="text-gray-800 font-medium">Cruelty-Free & Sustainable</span></li>
               <li>💖 <span className="text-gray-800 font-medium">Empowering Confidence & Beauty</span></li>

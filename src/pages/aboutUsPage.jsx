@@ -12,8 +12,8 @@ export default function AboutUsPage() {
         className="w-full h-full object-cover absolute top-0 left-0 z-0"
       />
 
-      {/* Center Container */}
-      <div className="relative z-10 w-full h-full flex flex-col items-center justify-center space-y-8">
+      {/* Top-aligned Container */}
+      <div className="relative z-10 w-full h-full flex flex-col items-center justify-start pt-20 space-y-8">
         
         {/* Small Title Card */}
         <div className="w-96 md:w-[500px] lg:w-[600px] h-[100px] rounded-3xl shadow-2xl bg-white/30 backdrop-blur-sm flex items-center justify-center">

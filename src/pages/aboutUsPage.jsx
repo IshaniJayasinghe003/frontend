@@ -12,28 +12,28 @@ export default function AboutUsPage() {
         className="w-full h-full object-cover absolute top-0 left-0 z-0"
       />
 
-      {/* Center Card Container */}
+      {/* Center Container */}
       <div className="relative z-10 flex justify-center items-center w-full h-full">
-        {/* Main Card */}
-        <div className="relative w-96 md:w-[500px] lg:w-[600px] mx-8">
+        {/* Main Card Wrapper */}
+        <div className="relative w-96 md:w-[500px] lg:w-[600px]">
           
           {/* Small Title Card on Top */}
           <div className="absolute -top-12 left-1/2 transform -translate-x-1/2 w-full h-[100px] rounded-3xl shadow-2xl bg-white/30 backdrop-blur-sm flex items-center justify-center z-20">
-            <p className="text-gray-900 font-bold text-xl">Evara Cosmetics</p>
+            <p className="text-gray-900 font-bold text-xl md:text-2xl">Evara Cosmetics</p>
           </div>
 
-          {/* Main Card Content */}
+          {/* Main Card */}
           <div
-            className="rounded-3xl shadow-2xl p-12 text-center bg-cover bg-center relative"
+            className="rounded-3xl shadow-2xl p-8 md:p-12 text-center bg-cover bg-center relative"
             style={{ backgroundImage: "url('brush.jpg')" }}
           >
-            {/* Overlay */}
+            {/* Overlay for readability */}
             <div className="absolute inset-0 bg-white/50 backdrop-blur-sm rounded-3xl"></div>
 
             {/* Content */}
             <div className="relative z-10">
-              <h1 className="text-4xl font-bold text-gray-900 mb-4">About Evara</h1>
-              <p className="text-lg font-semibold text-gray-800 mb-4">
+              <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">About Evara</h1>
+              <p className="text-base md:text-lg text-gray-800 mb-4">
                 We are dedicated to bringing you a curated selection of premium
                 skincare, makeup, haircare, and wellness products.
               </p>

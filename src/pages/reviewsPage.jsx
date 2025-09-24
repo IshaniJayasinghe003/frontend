@@ -59,7 +59,7 @@ export default function ReviewsPage() {
           {reviews.map((review, index) => (
             <div
               key={index}
-              className="shadow-lg rounded-2xl p-6 text-white transition hover:scale-105 bg-[#ffe5ec]/90"
+              className="shadow-lg rounded-2xl p-6 text-white transition hover:scale-105 bg-[#ff8fab]/90"
             >
               <div className="flex items-center justify-between mb-4">
                 <h2 className="text-lg font-semibold">{review.name}</h2>
@@ -106,7 +106,7 @@ export default function ReviewsPage() {
             ></textarea>
             <button
               type="submit"
-              className="bg-[#ffe5ec] text-white rounded-lg py-2 hover:bg-[#ff8fab] transition"
+              className="bg-[#ff8fab] text-white rounded-lg py-2 hover:bg-[#fb6f92] transition"
             >
               Submit Review
             </button>

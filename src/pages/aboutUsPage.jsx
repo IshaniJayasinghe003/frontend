@@ -7,7 +7,7 @@ export default function AboutUsPage() {
     <div className="w-full h-screen relative">
       {/* Full Background Image */}
       <img
-        src="face.jpg"
+        src="items.webp"
         alt="Evara Cosmetics Cover"
         className="w-full h-full object-cover absolute top-0 left-0 z-0"
       />
@@ -17,7 +17,7 @@ export default function AboutUsPage() {
         <div className="bg-white/30 backdrop-blur-md rounded-3xl shadow-2xl p-10 max-w-md text-center mx-8">
           {/* Optional Image inside Card */}
           <img
-            src="usp.webp"
+            src="blush.jpg"
             alt="Evara Logo"
             className="w-28 h-28 mx-auto mb-4 rounded-full object-cover shadow-lg"
           />

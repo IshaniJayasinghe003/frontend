@@ -12,22 +12,22 @@ export default function AboutUsPage() {
         className="w-full h-full object-cover absolute top-0 left-0 z-0"
       />
 
-      {/* Center Card */}
-      <div className="relative z-10 flex justify-left items-center w-full h-full">
-        <div className="bg-white/30 backdrop-blur-md rounded-4xl shadow-3xl p-10 max-w-md text-center">
+      {/* Center Card with side margin */}
+      <div className="relative z-10 flex justify-start items-center w-full h-full">
+        <div className="bg-white/30 backdrop-blur-md rounded-3xl shadow-2xl p-10 max-w-md text-center mx-8">
           {/* Optional Image inside Card */}
           <img
             src="usp.webp"
             alt="Evara Logo"
-            className="w-30 h-30 mx-auto mb-4 rounded-full object-cover shadow-lg"
+            className="w-28 h-28 mx-auto mb-4 rounded-full object-cover shadow-lg"
           />
 
-          <h1 className="text-4xl font-bold text-black-900 mb-4">About Evara</h1>
+          <h1 className="text-4xl font-bold text-gray-900 mb-4">About Evara</h1>
           <p className="text-lg font-semibold text-gray-800 mb-4">
             We are dedicated to bringing you a curated selection of premium
             skincare, makeup, haircare, and wellness products.
           </p>
-          <p className=" font-bold text-black-800 mb-4">
+          <p className="font-bold text-gray-900 mb-4">
             Our mission is simple: to empower your natural beauty with trusted
             brands that are safe, sustainable, and effective. At Evara, we
             believe in self-care, confidence, and conscious beauty.
@@ -44,7 +44,7 @@ export default function AboutUsPage() {
           {/* Navigate to Product Page */}
           <button
             onClick={() => navigate("/products")}
-            className="bg-white-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-white-700 transition"
+            className="bg-pink-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-pink-700 transition"
           >
             Explore Products
           </button>

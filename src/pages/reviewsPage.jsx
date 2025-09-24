@@ -42,7 +42,7 @@ export default function ReviewsPage() {
     <div className="w-full min-h-screen relative flex flex-col items-center justify-center">
       {/* Full Background Image */}
       <img
-        src="deli.webp" 
+        src="deli.webp" // replace with your image path
         alt="Reviews Background"
         className="w-full h-full object-cover absolute top-0 left-0 z-0"
       />
@@ -59,8 +59,7 @@ export default function ReviewsPage() {
           {reviews.map((review, index) => (
             <div
               key={index}
-              className={`shadow-lg rounded-2xl p-6 text-white transition hover:scale-105 
-                ${index % 2 === 0 ? "bg-pink-500/90" : "bg-blue-500/90"}`}
+              className="shadow-lg rounded-2xl p-6 text-white transition hover:scale-105 bg-pink-300/90"
             >
               <div className="flex items-center justify-between mb-4">
                 <h2 className="text-lg font-semibold">{review.name}</h2>

@@ -48,7 +48,7 @@ export default function AboutUsPage() {
             </ul>
 
             {/* Button */}
-            <div className="flex justify-center md:justify-start">
+            <div className="flex justify-center md:justify-center">
               <button
                 onClick={() => navigate("/products")}
                 className="bg-pink-300 text-white px-5 sm:px-6 py-2 sm:py-3 rounded-full font-semibold hover:bg-pink-400 transition text-sm sm:text-base"

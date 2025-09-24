@@ -10,7 +10,7 @@ export default function Header() {
   const token = localStorage.getItem("token");
 
   return (
- <header className="h-[100px] bg-tertiary flex justify-center items-center relative"> 
+    <header className="h-[100px] bg-tertiary flex justify-center items-center relative">
       {isOpen && (
         <div className="fixed z-[100] top-0 right-0 w-[100vw] h-[100vh] bg-[#00000050]">
           <div className="h-full w-[350px] bg-white flex flex-col">
@@ -22,7 +22,7 @@ export default function Header() {
               <img
                 className="w-[150px] h-[80px] object-cover cursor-pointer"
                 onClick={() => navigate("/")}
-                src="/evara.png"
+                src="evara.png"
                 alt="Logo"
               />
             </div>

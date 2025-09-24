@@ -1,5 +1,8 @@
+import { useState } from "react";
+
 export default function ReviewsPage() {
-  const reviews = [
+  // Initial reviews
+  const [reviews, setReviews] = useState([
     {
       name: "Sophia Williams",
       rating: 5,
@@ -10,7 +13,30 @@ export default function ReviewsPage() {
       rating: 4,
       comment: "Really good service. Packaging was neat. Would love to see more offers!",
     },
-  ];
+  ]);
+
+  // Form state
+  const [name, setName] = useState("");
+  const [rating, setRating] = useState("");
+  const [comment, setComment] = useState("");
+
+  // Handle form submit
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    if (!name || !rating || !comment) {
+      alert("Please fill all fields");
+      return;
+    }
+
+    // Add new review
+    setReviews([...reviews, { name, rating: parseInt(rating), comment }]);
+
+    // Clear form
+    setName("");
+    setRating("");
+    setComment("");
+  };
 
   return (
     <div className="w-full min-h-screen flex flex-col items-center bg-gray-50 py-12 px-4">
@@ -40,13 +66,19 @@ export default function ReviewsPage() {
       {/* Leave a Review Form */}
       <div className="w-full max-w-lg bg-white shadow-md rounded-2xl p-6">
         <h2 className="text-xl font-semibold text-gray-800 mb-4">Leave a Review</h2>
-        <form className="flex flex-col gap-4">
+        <form className="flex flex-col gap-4" onSubmit={handleSubmit}>
           <input
             type="text"
             placeholder="Your Name"
             className="border border-gray-300 rounded-lg p-2"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
           />
-          <select className="border border-gray-300 rounded-lg p-2">
+          <select
+            className="border border-gray-300 rounded-lg p-2"
+            value={rating}
+            onChange={(e) => setRating(e.target.value)}
+          >
             <option value="">Select Rating</option>
             <option value="5">⭐⭐⭐⭐⭐</option>
             <option value="4">⭐⭐⭐⭐</option>
@@ -58,6 +90,8 @@ export default function ReviewsPage() {
             placeholder="Write your review..."
             className="border border-gray-300 rounded-lg p-2"
             rows="4"
+            value={comment}
+            onChange={(e) => setComment(e.target.value)}
           ></textarea>
           <button
             type="submit"

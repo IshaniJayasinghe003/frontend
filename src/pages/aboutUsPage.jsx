@@ -32,10 +32,10 @@ export default function AboutUsPage() {
 
           {/* Content */}
           <div className="relative z-10">
-            <p className="text-sm sm:text-base md:text-lg font-bold text-black mb-3">
+            <p className="text-sm sm:text-base md:text-lg font-medium text-black mb-3">
               We are dedicated to bringing you a curated selection of premium skincare, makeup, haircare, and wellness products.
             </p>
-            <p className="text-sm sm:text-base md:text-base lg:text-lg font-bold text-black mb-4">
+            <p className="text-sm sm:text-base md:text-base lg:text-lg font-medium text-black mb-4">
               At Evara, our mission is to inspire confidence and self-expression through high-quality, carefully selected skincare, makeup, haircare, and wellness products. We partner with brands that prioritize safety, sustainability, and ethical practices, ensuring every product supports both your well-being and the environment. Our goal is to empower customers to feel confident, cared for, and radiant every day, while embracing mindful beauty choices.
             </p>
 

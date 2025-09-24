@@ -6,7 +6,7 @@ export default function AboutUsPage() {
   return (
     <div className="w-full h-screen flex">
       {/* Left Side - Image */}
-      <div className="w-1/2 h-full">
+      <div className="w-full h-full">
         <img
           src="face.jpg"
           alt="Evara Cosmetics Cover"

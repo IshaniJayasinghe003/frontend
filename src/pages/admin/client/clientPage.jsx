@@ -7,6 +7,7 @@ import CartPage from "./cart";
 import CheckoutPage from "./checkoutPage";
 import HomePage from "../../homePage";
 import AboutUsPage from "../../aboutUsPage";
+import ContactUsPage from "../../contactUsPage";
 
 export default function ClientWebPage() {
     return (
@@ -36,7 +37,7 @@ export default function ClientWebPage() {
 
                     <Route 
                     path="/contact-us" 
-                    element={<h1 className="text-3xl text-center">Contact Us Page</h1>} 
+                    element={<ContactUsPage/>} 
                     />
 
                     <Route

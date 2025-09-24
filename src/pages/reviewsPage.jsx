@@ -1,7 +1,6 @@
 import { useState } from "react";
 
 export default function ReviewsPage() {
-  // Initial reviews
   const [reviews, setReviews] = useState([
     {
       name: "Sophia Williams",
@@ -15,78 +14,72 @@ export default function ReviewsPage() {
     },
   ]);
 
-  // Form state
   const [name, setName] = useState("");
   const [rating, setRating] = useState("");
   const [comment, setComment] = useState("");
 
-  // Handle form submit
   const handleSubmit = (e) => {
     e.preventDefault();
-
     if (!name || !rating || !comment) {
       alert("Please fill all fields");
       return;
     }
-
-    // Add new review
     setReviews([...reviews, { name, rating: parseInt(rating), comment }]);
-
-    // Clear form
     setName("");
     setRating("");
     setComment("");
   };
 
   return (
-    <div className="w-full min-h-screen relative flex flex-col items-center justify-center">
+    <div className="w-full min-h-screen relative flex flex-col items-center justify-start sm:justify-center">
       {/* Full Background Image */}
       <img
-        src="deli.webp" // replace with your image path
+        src="deli.webp"
         alt="Reviews Background"
         className="w-full h-full object-cover absolute top-0 left-0 z-0"
       />
-
-      {/* Overlay for readability */}
+      {/* Overlay */}
       <div className="absolute inset-0 bg-black/40 z-0"></div>
 
-      <div className="relative z-10 w-full flex flex-col items-center py-12 px-4">
+      <div className="relative z-10 w-full flex flex-col items-center py-12 px-4 sm:px-6 lg:px-8">
         {/* Title */}
-        <h1 className="text-3xl font-bold text-white mb-8">Customer Reviews</h1>
+        <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-8 text-center">
+          Customer Reviews
+        </h1>
 
         {/* Reviews */}
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 w-full max-w-6xl mb-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-6xl mb-12">
           {reviews.map((review, index) => (
             <div
               key={index}
-              className="shadow-lg rounded-2xl p-6 text-white transition hover:scale-105 bg-[#ff8fab]/90"
+              className="shadow-lg rounded-2xl p-4 sm:p-6 text-white transition hover:scale-105 bg-[#ff8fab]/90"
             >
-              <div className="flex items-center justify-between mb-4">
-                <h2 className="text-lg font-semibold">{review.name}</h2>
+              <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between mb-4">
+                <h2 className="text-md sm:text-lg font-semibold mb-2 sm:mb-0">{review.name}</h2>
                 <div className="flex text-yellow-300">
                   {Array.from({ length: review.rating }).map((_, i) => (
                     <span key={i}>⭐</span>
                   ))}
                 </div>
               </div>
-              <p>{review.comment}</p>
+              <p className="text-sm sm:text-base">{review.comment}</p>
             </div>
           ))}
         </div>
 
         {/* Leave a Review Form */}
-        <div className="w-full max-w-lg bg-white/90 shadow-md rounded-2xl p-6">
-          <h2 className="text-xl font-semibold text-gray-800 mb-4">Leave a Review</h2>
-          <form className="flex flex-col gap-4" onSubmit={handleSubmit}>
+        <div className="w-full max-w-md sm:max-w-lg bg-white/90 shadow-md rounded-2xl p-4 sm:p-6">
+          <h2 className="text-lg sm:text-xl font-semibold text-gray-800 mb-4">Leave a Review</h2>
+          <form className="flex flex-col gap-3 sm:gap-4" onSubmit={handleSubmit}>
             <input
               type="text"
               placeholder="Your Name"
-              className="border border-gray-300 rounded-lg p-2"
+              className="border border-gray-300 rounded-lg p-2 text-sm sm:text-base"
               value={name}
               onChange={(e) => setName(e.target.value)}
             />
             <select
-              className="border border-gray-300 rounded-lg p-2"
+              className="border border-gray-300 rounded-lg p-2 text-sm sm:text-base"
               value={rating}
               onChange={(e) => setRating(e.target.value)}
             >
@@ -99,14 +92,14 @@ export default function ReviewsPage() {
             </select>
             <textarea
               placeholder="Write your review..."
-              className="border border-gray-300 rounded-lg p-2"
+              className="border border-gray-300 rounded-lg p-2 text-sm sm:text-base"
               rows="4"
               value={comment}
               onChange={(e) => setComment(e.target.value)}
             ></textarea>
             <button
               type="submit"
-              className="bg-[#ff8fab] text-white rounded-lg py-2 hover:bg-[#fb6f92] transition"
+              className="bg-[#ff8fab] text-white rounded-lg py-2 hover:bg-[#fb6f92] transition text-sm sm:text-base"
             >
               Submit Review
             </button>

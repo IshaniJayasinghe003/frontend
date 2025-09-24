@@ -8,6 +8,7 @@ import CheckoutPage from "./checkoutPage";
 import HomePage from "../../homePage";
 import AboutUsPage from "../../aboutUsPage";
 import ContactUsPage from "../../contactUsPage";
+import ReviewsPage from "../../reviewsPage";
 
 export default function ClientWebPage() {
     return (
@@ -27,7 +28,7 @@ export default function ClientWebPage() {
                      
                     <Route 
                     path="/reviews" 
-                    element={<h1 className="text-3xl text-center">Reviews Page</h1>} 
+                    element={<ReviewsPage/>} 
                     />
 
                     <Route 

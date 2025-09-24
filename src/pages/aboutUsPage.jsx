@@ -4,7 +4,7 @@ export default function AboutUsPage() {
   const navigate = useNavigate();
 
   return (
-    <div className="w-full min-h-screen relative">
+    <div className="w-full min-h-screen relative bg-gray-100">
       {/* Full Background Image */}
       <img
         src="face.jpg"
@@ -12,22 +12,26 @@ export default function AboutUsPage() {
         className="w-full h-full object-cover absolute top-0 left-0 z-0"
       />
 
-      {/* Top-aligned Container */}
-      <div className="relative z-10 w-full min-h-screen flex flex-col items-center justify-start pt-16 md:pt-20 lg:pt-24 space-y-6 md:space-y-8">
+      {/* Container */}
+      <div className="relative z-10 w-full min-h-screen flex flex-col md:flex-row items-start justify-start pt-16 md:pt-24 px-4 md:px-12 space-y-6 md:space-y-0 md:space-x-8">
         
-       {/* Main Card */}
-        <p className="text-white font-bold text-lg sm:text-xl md:text-2xl lg:text-3xl text-center px-4">
+        {/* Small Side Card */}
+        <div className="bg-pink-300/30 backdrop-blur-sm rounded-3xl shadow-2xl p-4 md:p-6 w-40 md:w-48 flex items-center justify-center">
+          <p className="text-white font-bold text-sm md:text-lg text-center">
             About Evara
           </p>
+        </div>
+
+        {/* Main Card */}
         <div
-        className="w-11/12 sm:w-96 md:w-[500px] lg:w-[600px] rounded-3xl shadow-2xl p-6 sm:p-8 md:p-12 text-center bg-cover bg-center relative"
+          className="w-full sm:w-96 md:w-[500px] lg:w-[600px] rounded-3xl shadow-2xl p-6 sm:p-8 md:p-12 text-left bg-cover bg-center relative"
           style={{ backgroundImage: "url('brush.jpg')" }}
         >
           {/* Overlay */}
           <div className="absolute inset-0 bg-[#ffe5ec]/50 backdrop-blur-sm rounded-3xl"></div>
 
           {/* Content */}
-          <div className="relative z-10 text-left md:text-center">
+          <div className="relative z-10">
             <p className="text-sm sm:text-base md:text-lg font-bold text-black mb-3">
               We are dedicated to bringing you a curated selection of premium skincare, makeup, haircare, and wellness products.
             </p>
@@ -44,7 +48,7 @@ export default function AboutUsPage() {
             </ul>
 
             {/* Button */}
-            <div className="flex justify-center">
+            <div className="flex justify-center md:justify-start">
               <button
                 onClick={() => navigate("/products")}
                 className="bg-pink-300 text-white px-5 sm:px-6 py-2 sm:py-3 rounded-full font-semibold hover:bg-pink-400 transition text-sm sm:text-base"

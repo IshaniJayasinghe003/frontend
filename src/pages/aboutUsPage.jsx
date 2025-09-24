@@ -7,7 +7,7 @@ export default function AboutUsPage() {
     <div className="w-full h-screen relative">
       {/* Full Background Image */}
       <img
-        src="items.webp"
+        src="face.jpg"
         alt="Evara Cosmetics Cover"
         className="w-full h-full object-cover absolute top-0 left-0 z-0"
       />
@@ -16,7 +16,7 @@ export default function AboutUsPage() {
       <div className="relative z-10 flex justify-start items-center w-full h-full">
         <div
           className="rounded-3xl shadow-2xl p-10 max-w-md text-center mx-8 bg-cover bg-center relative"
-          style={{ backgroundImage: "url('blush.jpg')" }} // 👈 image for card background
+          style={{ backgroundImage: "url('brush.jpg')" }} // 👈 image for card background
         >
           {/* Overlay for readability */}
           <div className="absolute inset-0 bg-white/50 backdrop-blur-sm rounded-3xl"></div>

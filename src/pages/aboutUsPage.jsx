@@ -13,10 +13,10 @@ export default function AboutUsPage() {
       />
 
       {/* Center Container */}
-      <div className="relative z-10 w-full h-full flex flex-col items-center justify-center space-y-8">
+      <div className="relative z-10 w-full h-full flex flex-col items-center justify-start space-y-8">
         
         {/* Small Title Card in center */}
-        <div className="w-96 md:w-[500px] lg:w-[600px] h-[100px] rounded-3xl shadow-2xl bg-white/30 backdrop-blur-sm flex items-center justify-center">
+        <div className="w-96 md:w-[500px] lg:w-[600px] h-[100px] rounded-3xl shadow-2xl bg-white/30 backdrop-blur-sm flex items-center justify-start">
           <p className="text-gray-900 font-bold text-xl md:text-2xl">Evara Cosmetics</p>
         </div>
 

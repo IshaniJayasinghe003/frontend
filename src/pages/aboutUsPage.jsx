@@ -15,16 +15,12 @@ export default function AboutUsPage() {
       {/* Top-aligned Container */}
       <div className="relative z-10 w-full min-h-screen flex flex-col items-center justify-start pt-16 md:pt-20 lg:pt-24 space-y-6 md:space-y-8">
         
-        {/* Small Title Card */}
-        <div className="w-11/12 sm:w-96 md:w-[500px] lg:w-[600px] h-[100px] rounded-3xl shadow-2xl bg-pink-300/30 backdrop-blur-sm flex items-center justify-center">
-          <p className="text-white font-bold text-lg sm:text-xl md:text-2xl lg:text-3xl text-center px-4">
+       {/* Main Card */}
+        <p className="text-white font-bold text-lg sm:text-xl md:text-2xl lg:text-3xl text-center px-4">
             About Evara
           </p>
-        </div>
-
-        {/* Main Card */}
         <div
-          className="w-11/12 sm:w-96 md:w-[500px] lg:w-[600px] rounded-3xl shadow-2xl p-6 sm:p-8 md:p-12 text-center bg-cover bg-center relative"
+        className="w-11/12 sm:w-96 md:w-[500px] lg:w-[600px] rounded-3xl shadow-2xl p-6 sm:p-8 md:p-12 text-center bg-cover bg-center relative"
           style={{ backgroundImage: "url('brush.jpg')" }}
         >
           {/* Overlay */}

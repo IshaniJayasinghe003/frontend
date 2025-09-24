@@ -24,7 +24,7 @@ export default function AboutUsPage() {
           style={{ backgroundImage: "url('brush.jpg')" }}
         >
           {/* Overlay */}
-          <div className="absolute inset-0 bg-pink-300/50 backdrop-blur-sm rounded-3xl"></div>
+          <div className="absolute inset-0 bg-[#ffe5ec]/50 backdrop-blur-sm rounded-3xl"></div>
 
           {/* Content */}
           <div className="relative z-10 text-left md:text-center">

@@ -22,7 +22,7 @@ export default function Header() {
               <img
                 className="w-[150px] h-[80px] object-cover cursor-pointer"
                 onClick={() => navigate("/")}
-                src="/logo.png"
+                src="/newlo.jpg"
                 alt="Logo"
               />
             </div>

@@ -15,7 +15,7 @@ export default function AboutUsPage() {
       {/* Container */}
       <div className="relative z-10 w-full min-h-screen flex flex-col md:flex-row items-center md:items-start justify-center md:justify-start pt-16 md:pt-24 px-4 md:px-12 space-y-6 md:space-y-0 md:space-x-8">
         
-        {/* Small Side Card (visible on both but left-aligned on desktop, centered on mobile) */}
+        {/* Small Side Card ) */}
         <div className="bg-pink-400/30 backdrop-blur-sm rounded-3xl shadow-2xl p-4 md:p-6 w-40 md:w-48 flex items-center justify-center">
           <p className="text-white font-bold text-sm md:text-lg text-center">
             About Evara

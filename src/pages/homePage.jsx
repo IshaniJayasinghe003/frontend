@@ -49,7 +49,7 @@ export default function HomePage() {
           </p>
           <button 
             onClick={() => window.location.href="/products"} 
-            className="w-full sm:w-auto px-6 sm:px-10 py-3 sm:py-4 bg-pink-400 text-white font-semibold rounded-full shadow-lg hover:bg-pink-500 hover:scale-105 transition transform duration-300"
+            className="w-full sm:w-auto px-6 sm:px-10 py-3 sm:py-4 bg-pink-400 text-white font-bold rounded-full shadow-lg hover:bg-pink-500 hover:scale-105 transition transform duration-300"
           >
             Shop Now
           </button>

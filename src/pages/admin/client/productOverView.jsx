@@ -4,116 +4,109 @@ import toast from "react-hot-toast";
 import axios from "axios";
 import Loader from "../../../components/loader";
 import ImageSlider from "../../../components/imageSlider";
-import { addToCart, getCart } from "../../../utils/cart"; 
+import { addToCart, getCart } from "../../../utils/cart";
 
 export default function ProductOverViewPage() {
-    const params = useParams();
-    const [product, setProduct] = useState(null);
-    const navigate = useNavigate();
-    const [status, setStatus] = useState("loading"); // loading, success, error
+  const params = useParams();
+  const navigate = useNavigate();
+  const [product, setProduct] = useState(null);
+  const [status, setStatus] = useState("loading"); // loading, success, error
 
-    useEffect(() => {
-        if (status === "loading") {
-            axios.get(`${import.meta.env.VITE_BACKEND_URL}/api/products/${params.productId}`)
-                .then((res) => {
-                    setProduct(res.data);
-                    setStatus("success");
-                })
-                .catch(() => {
-                    setStatus("error");
-                });
-        }
-    }, [status, params.productId]);
+  useEffect(() => {
+    if (status === "loading") {
+      axios
+        .get(`${import.meta.env.VITE_BACKEND_URL}/api/products/${params.productId}`)
+        .then((res) => {
+          setProduct(res.data);
+          setStatus("success");
+        })
+        .catch(() => {
+          setStatus("error");
+        });
+    }
+  }, [status, params.productId]);
 
-    return (
-        <div className="w-full h-full">
-            {status == "loading" && <Loader />}
-            {status == "success" && (
-                <div className="w-full h-full flex flex-col md:flex-row">
-                    <h1 className="text-2xl my-4 text-center font-bold md:hidden">
-                            {product.name}{" "}
-                            <span className="font-light">
-                                {product.altNames.join(" | ")}
-                            </span>
-                        </h1>
-                   
-                    <div className="w-full md:w-[49%] h-full flex flex-col justify-center items-center">
-                        <ImageSlider images={product.images} />
-                    </div>
+  if (status === "loading") return <Loader />;
+  if (status === "error") return <div className="text-center text-red-500 mt-10">Error loading product</div>;
 
-                    {/* Right side */}
-                    <div className="w-full md:w-[49%] h-full flex flex-col items-center pt-[50px]">
-                        <h1 className="text-2xl font-bold hidden md:block">
-                            {product.name}{" "}
-                            <span className="font-light">
-                                {product.altNames.join(" | ")}
-                            </span>
-                        </h1>
-
-                        <p className="text-lg p-2">{product.description}</p>
-
-                        <div className="w-full flex flex-col items-center mt-[20px]">
-                            {product.labelledPrice > product.price ? (
-                                <div>
-                                    <span className="text-2xl font-semibold line-through mr-[20px]">
-                                        {product.labelledPrice.toLocaleString("en-US", {
-                                            minimumFractionDigits: 2,
-                                            maximumFractionDigits: 2,
-                                        })}
-                                    </span>
-                                    <span className="text-3xl font-bold">
-                                        {product.price.toLocaleString("en-US", {
-                                            minimumFractionDigits: 2,
-                                            maximumFractionDigits: 2,
-                                        })}
-                                    </span>
-                                </div>
-                            ) : (
-                                <div>
-                                    <span className="text-3xl font-bold">
-                                        {product.price.toLocaleString("en-US", {
-                                            minimumFractionDigits: 2,
-                                            maximumFractionDigits: 2,
-                                        })}
-                                    </span>
-                                </div>
-                            )}
-                        </div>
-
-                        {/* Buttons Row */}
-                        <div className="w-full flex flex-row justify-center items-center mt-[20px] gap-[10px]">
-                            <button
-								onClick={() => {
-									navigate("/checkout", {
-										state: {
-											items: [
-												{
-													productId: product.productId,
-													quantity: 1,
-													name: product.name,
-													image: product.images[0],
-													price: product.price,
-												},
-											],
-										},
-									});
-								}}
-								className="w-[200px] h-[50px] cursor-pointer rounded-xl shadow-2xl text-white bg-blue-900 border-[3px] border-blue-900 hover:bg-white hover:text-blue-900"
-							>
-								Buy Now
-							</button>
-                            <button className="w-[200px] h-[50px] cursor-pointer rounded-xl shadow-2xl text-white bg-blue-600 border-[3px] border-blue-600 hover:bg-white hover:text-blue-600" onClick={
-                                ()=>{
-                                    addToCart(product,1)
-                                    toast.success("Product added to cart")
-                                    console.log(getCart())
-                                }
-                            } >Add to Cart</button>
-                        </div>
-                    </div>
-                </div>
-            )}
-            {status == "error" && <div>Error loading product</div>}
+  return (
+    <div className="w-full min-h-screen bg-gray-50 py-6 px-4 sm:px-10 md:px-20">
+      <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-8">
+        
+        {/* Left: Image Slider */}
+        <div className="w-full md:w-1/2 flex justify-center items-center bg-white rounded-2xl shadow-lg p-4">
+          <ImageSlider images={product.images} />
         </div>
-    );
+
+        {/* Right: Product Info */}
+        <div className="w-full md:w-1/2 flex flex-col justify-start bg-white rounded-2xl shadow-lg p-6 md:p-8">
+          
+          {/* Product Title */}
+          <h1 className="text-2xl sm:text-3xl font-bold text-gray-800 mb-2">
+            {product.name}{" "}
+            <span className="font-light text-gray-500 text-sm sm:text-base">
+              {product.altNames.join(" | ")}
+            </span>
+          </h1>
+
+          {/* Description */}
+          <p className="text-gray-700 text-base sm:text-lg leading-relaxed mt-3">
+            {product.description}
+          </p>
+
+          {/* Price Section */}
+          <div className="mt-6 flex items-baseline gap-4">
+            {product.labelledPrice > product.price ? (
+              <>
+                <span className="text-gray-400 text-lg line-through">
+                  LKR {product.labelledPrice.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
+                </span>
+                <span className="text-pink-600 text-3xl font-bold">
+                  LKR {product.price.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
+                </span>
+              </>
+            ) : (
+              <span className="text-gray-800 text-3xl font-bold">
+                LKR {product.price.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
+              </span>
+            )}
+          </div>
+
+          {/* Buttons */}
+          <div className="mt-6 flex flex-col sm:flex-row gap-4">
+            <button
+              onClick={() => {
+                navigate("/checkout", {
+                  state: {
+                    items: [
+                      {
+                        productId: product.productId,
+                        quantity: 1,
+                        name: product.name,
+                        image: product.images[0],
+                        price: product.price,
+                      },
+                    ],
+                  },
+                });
+              }}
+              className="w-full sm:w-1/2 py-3 bg-blue-900 text-white font-semibold rounded-xl shadow-lg hover:bg-white hover:text-blue-900 hover:border hover:border-blue-900 transition"
+            >
+              Buy Now
+            </button>
+
+            <button
+              onClick={() => {
+                addToCart(product, 1);
+                toast.success("Product added to cart");
+              }}
+              className="w-full sm:w-1/2 py-3 bg-blue-600 text-white font-semibold rounded-xl shadow-lg hover:bg-white hover:text-blue-600 hover:border hover:border-blue-600 transition"
+            >
+              Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 }

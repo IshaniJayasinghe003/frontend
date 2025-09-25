@@ -6,7 +6,7 @@ import { IoSettings } from "react-icons/io5";
 import ProductsAdminPage from "./admin/productsAdminPage";
 import AddProductAdminPage from "./admin/addProductAdminPage";
 import UpdateProductpage from "./admin/updateProduct";
-import OrdersPageAdmin from "./admin/ordersPage";
+import OrdersPageAdmin from "./admin/ordersPageAdmin";
 import { useState, useEffect } from "react";
 import axios from "axios";                    
 import toast from "react-hot-toast";

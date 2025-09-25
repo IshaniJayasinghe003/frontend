@@ -26,7 +26,7 @@ export default function RegisterPage() {
   };
 
   return (
-    <div className="w-full min-h-screen flex items-center justify-center relative bg-pink-300">
+    <div className="w-full min-h-screen flex items-center justify-center relative ">
 
       {/* Background image with overlay */}
       <img 

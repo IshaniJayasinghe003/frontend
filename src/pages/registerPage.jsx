@@ -16,7 +16,7 @@ export default function RegisterPage() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if(formData.password !== formData.confirmPassword){
+    if (formData.password !== formData.confirmPassword) {
       alert("Passwords do not match");
       return;
     }
@@ -26,19 +26,23 @@ export default function RegisterPage() {
   };
 
   return (
-    <div className="w-full min-h-screen flex items-center justify-center relative ">
+    <div className="w-full min-h-screen flex items-center justify-center relative bg-gray-100">
 
       {/* Background image with overlay */}
       <img 
         src="hero_bg.jpg" 
         alt="Background" 
-        className="absolute w-full h-full object-cover "
+        className="absolute w-full h-full object-cover"
       />
+      <div className="absolute inset-0 bg-black/30"></div> {/* dark overlay */}
 
-      <div className="relative w-full max-w-md sm:max-w-sm mx-4 bg-white rounded-xl shadow-xl p-6 sm:p-4">
-        <h1 className="text-2xl sm:text-3xl font-bold text-center mb-4 text-gray-800">Create Account</h1>
-        
-        <form onSubmit={handleSubmit} className="flex flex-col gap-3 sm:gap-4">
+      <div className="relative w-full max-w-md sm:max-w-sm mx-4 bg-white rounded-2xl shadow-2xl p-6 sm:p-8 flex flex-col">
+        <h1 className="text-3xl sm:text-4xl font-bold text-center mb-6 text-gray-800 drop-shadow-md">
+          Create Account
+        </h1>
+
+        <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+          {/* Full Name */}
           <div className="flex flex-col">
             <label className="text-gray-700 font-semibold mb-1 text-sm sm:text-base">Full Name</label>
             <input 
@@ -47,11 +51,12 @@ export default function RegisterPage() {
               value={formData.name} 
               onChange={handleChange} 
               placeholder="John Doe"
-              className="border rounded-lg h-9 sm:h-10 px-3 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-pink-400"
+              className="border border-gray-300 rounded-lg h-10 sm:h-12 px-3 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-pink-400 transition"
               required
             />
           </div>
 
+          {/* Email */}
           <div className="flex flex-col">
             <label className="text-gray-700 font-semibold mb-1 text-sm sm:text-base">Email</label>
             <input 
@@ -60,11 +65,12 @@ export default function RegisterPage() {
               value={formData.email} 
               onChange={handleChange} 
               placeholder="example@email.com"
-              className="border rounded-lg h-9 sm:h-10 px-3 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-pink-400"
+              className="border border-gray-300 rounded-lg h-10 sm:h-12 px-3 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-pink-400 transition"
               required
             />
           </div>
 
+          {/* Password */}
           <div className="flex flex-col">
             <label className="text-gray-700 font-semibold mb-1 text-sm sm:text-base">Password</label>
             <input 
@@ -73,11 +79,12 @@ export default function RegisterPage() {
               value={formData.password} 
               onChange={handleChange} 
               placeholder="Enter password"
-              className="border rounded-lg h-9 sm:h-10 px-3 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-pink-400"
+              className="border border-gray-300 rounded-lg h-10 sm:h-12 px-3 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-pink-400 transition"
               required
             />
           </div>
 
+          {/* Confirm Password */}
           <div className="flex flex-col">
             <label className="text-gray-700 font-semibold mb-1 text-sm sm:text-base">Confirm Password</label>
             <input 
@@ -86,20 +93,20 @@ export default function RegisterPage() {
               value={formData.confirmPassword} 
               onChange={handleChange} 
               placeholder="Confirm password"
-              className="border rounded-lg h-9 sm:h-10 px-3 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-pink-400"
+              className="border border-gray-300 rounded-lg h-10 sm:h-12 px-3 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-pink-400 transition"
               required
             />
           </div>
 
           <button 
             type="submit"
-            className="mt-4 bg-pink-500 hover:bg-pink-600 text-white font-semibold h-10 sm:h-12 rounded-lg shadow-lg transition duration-300 text-sm sm:text-base"
+            className="mt-4 bg-pink-500 hover:bg-pink-600 text-white font-semibold h-12 rounded-xl shadow-lg transition duration-300 text-base sm:text-lg"
           >
             Register
           </button>
         </form>
 
-        <p className="text-center text-gray-600 mt-3 text-sm sm:text-base">
+        <p className="text-center text-gray-600 mt-4 text-sm sm:text-base">
           Already have an account?{" "}
           <Link to="/login" className="text-pink-500 font-semibold hover:underline">
             Login

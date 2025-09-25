@@ -20,81 +20,88 @@ export default function RegisterPage() {
       alert("Passwords do not match");
       return;
     }
-    // TODO: handle registration logic (API call)
     console.log(formData);
     alert("Registered successfully!");
     navigate("/login");
   };
 
   return (
-    <div className="w-full min-h-screen flex items-center justify-center bg-gradient-to-r from-pink-400 via-purple-400 to-blue-500 p-4">
-      <div className="w-full max-w-md bg-white rounded-xl shadow-xl p-8">
-        <h1 className="text-3xl font-bold text-center mb-6 text-gray-800">Create Account</h1>
+    <div className="w-full min-h-screen flex items-center justify-center relative bg-pink-300">
+
+      {/* Background image with overlay */}
+      <img 
+        src="brush.jpg" 
+        alt="Background" 
+        className="absolute w-full h-full object-cover opacity-30"
+      />
+
+      <div className="relative w-full max-w-md sm:max-w-sm mx-4 bg-white rounded-xl shadow-xl p-6 sm:p-4">
+        <h1 className="text-2xl sm:text-3xl font-bold text-center mb-4 text-gray-800">Create Account</h1>
         
-        <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+        <form onSubmit={handleSubmit} className="flex flex-col gap-3 sm:gap-4">
           <div className="flex flex-col">
-            <label className="text-gray-700 font-semibold mb-1">Full Name</label>
+            <label className="text-gray-700 font-semibold mb-1 text-sm sm:text-base">Full Name</label>
             <input 
               type="text" 
               name="name"
               value={formData.name} 
               onChange={handleChange} 
               placeholder="John Doe"
-              className="border rounded-lg h-10 px-3 focus:outline-none focus:ring-2 focus:ring-purple-400"
+              className="border rounded-lg h-9 sm:h-10 px-3 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-pink-400"
               required
             />
           </div>
 
           <div className="flex flex-col">
-            <label className="text-gray-700 font-semibold mb-1">Email</label>
+            <label className="text-gray-700 font-semibold mb-1 text-sm sm:text-base">Email</label>
             <input 
               type="email" 
               name="email"
               value={formData.email} 
               onChange={handleChange} 
               placeholder="example@email.com"
-              className="border rounded-lg h-10 px-3 focus:outline-none focus:ring-2 focus:ring-purple-400"
+              className="border rounded-lg h-9 sm:h-10 px-3 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-pink-400"
               required
             />
           </div>
 
           <div className="flex flex-col">
-            <label className="text-gray-700 font-semibold mb-1">Password</label>
+            <label className="text-gray-700 font-semibold mb-1 text-sm sm:text-base">Password</label>
             <input 
               type="password" 
               name="password"
               value={formData.password} 
               onChange={handleChange} 
               placeholder="Enter password"
-              className="border rounded-lg h-10 px-3 focus:outline-none focus:ring-2 focus:ring-purple-400"
+              className="border rounded-lg h-9 sm:h-10 px-3 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-pink-400"
               required
             />
           </div>
 
           <div className="flex flex-col">
-            <label className="text-gray-700 font-semibold mb-1">Confirm Password</label>
+            <label className="text-gray-700 font-semibold mb-1 text-sm sm:text-base">Confirm Password</label>
             <input 
               type="password" 
               name="confirmPassword"
               value={formData.confirmPassword} 
               onChange={handleChange} 
               placeholder="Confirm password"
-              className="border rounded-lg h-10 px-3 focus:outline-none focus:ring-2 focus:ring-purple-400"
+              className="border rounded-lg h-9 sm:h-10 px-3 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-pink-400"
               required
             />
           </div>
 
           <button 
             type="submit"
-            className="mt-4 bg-purple-500 hover:bg-purple-600 text-white font-semibold h-12 rounded-lg shadow-lg transition duration-300"
+            className="mt-4 bg-pink-500 hover:bg-pink-600 text-white font-semibold h-10 sm:h-12 rounded-lg shadow-lg transition duration-300 text-sm sm:text-base"
           >
             Register
           </button>
         </form>
 
-        <p className="text-center text-gray-600 mt-4">
+        <p className="text-center text-gray-600 mt-3 text-sm sm:text-base">
           Already have an account?{" "}
-          <Link to="/login" className="text-purple-500 font-semibold hover:underline">
+          <Link to="/login" className="text-pink-500 font-semibold hover:underline">
             Login
           </Link>
         </p>

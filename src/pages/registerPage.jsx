@@ -32,7 +32,7 @@ export default function RegisterPage() {
       <img 
         src="brush.jpg" 
         alt="Background" 
-        className="absolute w-full h-full object-cover opacity-30"
+        className="absolute w-full h-full object-cover "
       />
 
       <div className="relative w-full max-w-md sm:max-w-sm mx-4 bg-white rounded-xl shadow-xl p-6 sm:p-4">

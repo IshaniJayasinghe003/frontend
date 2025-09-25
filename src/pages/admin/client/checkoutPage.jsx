@@ -30,8 +30,7 @@ export default function CheckoutPage() {
         setUser(res.data);
         setName(res.data.firstName + " " + res.data.lastName);
       })
-      .catch((err) => {
-        console.error(err);
+      .catch(() => {
         toast.error("Failed to fetch user details");
       });
 
@@ -42,11 +41,7 @@ export default function CheckoutPage() {
   }, []);
 
   function getTotal() {
-    let total = 0;
-    cart.forEach((item) => {
-      total += item.quantity * item.price;
-    });
-    return total;
+    return cart.reduce((acc, item) => acc + item.quantity * item.price, 0);
   }
 
   async function placeOrder() {
@@ -56,7 +51,7 @@ export default function CheckoutPage() {
       navigate("/login");
       return;
     }
-    if (name === "" || address === "" || phone === "") {
+    if (!name || !address || !phone) {
       toast.error("Please fill all the fields");
       return;
     }
@@ -75,131 +70,113 @@ export default function CheckoutPage() {
         headers: { Authorization: `Bearer ${token}` },
       });
       toast.success("Order placed successfully");
-    } catch (err) {
-      console.error(err);
+    } catch {
       toast.error("Failed to place order");
     }
   }
 
   return (
-    <div className="w-[100vw] max-w-[100vw] min-h-screen flex flex-col px-[10px] py-[20px] items-center bg-white">
+    <div className="w-full min-h-screen bg-gray-100 px-4 sm:px-10 py-6 flex flex-col items-center gap-6">
       {cart.map((item, index) => (
         <div
           key={item.productId}
-          className="w-full md:w-[800px] h-[200px] md:h-[100px] bg-white rounded-lg m-[10px] shadow-2xl flex flex-row items-center relative"
+          className="w-full max-w-4xl bg-white rounded-xl shadow-lg flex flex-col sm:flex-row items-center p-4 sm:p-6 gap-4 relative"
         >
-          <div className="md:w-[100px] w-[200px] justify-center items-center flex flex-col text-2xl md:text-md">
-            <img
-              src={item.image}
-              className="w-[100px] h-[100px] object-cover rounded-md"
-            />
-            <div className="h-full flex-col justify-center pl-[10px] md:hidden flex">
-              <span className="font-bold text-center md:text-left">
-                {item.name}
-              </span>
-              <span className="font-semibold text-center md:text-left">
-                {item.price.toLocaleString("en-US", {
-                  minimumFractionDigits: 2,
-                  maximumFractionDigits: 2,
-                })}
-              </span>
-            </div>
-          </div>
+          {/* Image */}
+          <img
+            src={item.image}
+            className="w-32 h-32 sm:w-36 sm:h-36 object-cover rounded-lg"
+          />
 
-          <div className="w-[320px] h-full flex-col justify-center pl-[10px] hidden md:flex">
-            <span className="font-bold">{item.name}</span>
-            <span className="font-semibold">
-              {item.price.toLocaleString("en-US", {
-                minimumFractionDigits: 2,
-                maximumFractionDigits: 2,
-              })}
+          {/* Product Info */}
+          <div className="flex-1 flex flex-col justify-center gap-2">
+            <span className="text-gray-500 text-sm sm:text-base">#{item.productId}</span>
+            <h2 className="text-lg sm:text-xl font-bold text-gray-800">{item.name}</h2>
+            <span className="text-pink-600 font-semibold text-lg sm:text-xl">
+              LKR {item.price.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
             </span>
           </div>
 
-          <div className="w-[190px] h-full text-4xl md:text-md flex flex-row justify-center items-center">
+          {/* Quantity Controls */}
+          <div className="flex items-center gap-2">
             <button
-              className="flex justify-center items-center w-[30px] rounded-lg bg-accent text-white cursor-pointer hover:bg-blue-400"
               onClick={() => {
                 const newCart = [...cart];
                 newCart[index].quantity -= 1;
                 if (newCart[index].quantity <= 0) newCart.splice(index, 1);
                 setCart(newCart);
               }}
+              className="w-10 h-10 bg-blue-500 text-white rounded-lg font-bold hover:bg-blue-600 transition"
             >
               -
             </button>
-            <span className="mx-[10px]">{item.quantity}</span>
+            <span className="text-lg sm:text-xl font-semibold">{item.quantity}</span>
             <button
-              className="flex justify-center items-center w-[30px] rounded-lg bg-accent text-white cursor-pointer hover:bg-blue-400"
               onClick={() => {
                 const newCart = [...cart];
                 newCart[index].quantity += 1;
                 setCart(newCart);
               }}
+              className="w-10 h-10 bg-blue-500 text-white rounded-lg font-bold hover:bg-blue-600 transition"
             >
               +
             </button>
           </div>
 
-          <div className="w-[190px] text-3xl md:text-md h-full flex justify-end items-center pr-[10px]">
-            <span className="font-semibold">
-              {(item.quantity * item.price).toLocaleString("en-US", {
-                minimumFractionDigits: 2,
-                maximumFractionDigits: 2,
-              })}
-            </span>
-          </div>
+          {/* Total Price */}
+          <span className="text-lg sm:text-xl font-bold text-gray-800 ml-4">
+            LKR {(item.quantity * item.price).toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
+          </span>
 
+          {/* Trash Button */}
           <button
-            className="w-[30px] h-[30px] absolute top-[5px] right-[5px] md:top-[35px] md:right-[-40px] cursor-pointer bg-red-700 shadow rounded-full flex justify-center items-center text-white border-[2px] border-red-700 hover:bg-white hover:text-red-700"
             onClick={() => {
               const newCart = [...cart];
               newCart.splice(index, 1);
               setCart(newCart);
             }}
+            className="absolute top-2 right-2 w-10 h-10 bg-red-600 text-white rounded-full flex items-center justify-center hover:bg-red-700 transition"
           >
             <TbTrash className="text-xl" />
           </button>
         </div>
       ))}
 
-      <div className="md:w-[800px] w-full h-[100px] m-[10px] p-[10px] bg-white rounded-lg shadow-2xl flex flex-row items-center justify-between">
+      {/* Checkout Summary */}
+      <div className="w-full max-w-4xl bg-white rounded-xl shadow-lg flex flex-col sm:flex-row justify-between items-center p-4 sm:p-6 gap-4">
         <button
           onClick={placeOrder}
-          className="w-[150px] md:w-[180px] h-[50px] cursor-pointer rounded-lg shadow-2xl bg-accent border-[2px] border-accent text-white hover:bg-white hover:text-accent"
+          className="w-full sm:w-48 h-12 bg-green-600 text-white rounded-lg font-semibold hover:bg-green-700 transition"
         >
           Place Order
         </button>
-        <span className="font-bold text-2xl">
-          Total:{" "}
-          {getTotal().toLocaleString("en-US", {
-            minimumFractionDigits: 2,
-            maximumFractionDigits: 2,
-          })}
+        <span className="text-lg sm:text-xl font-bold">
+          Total: LKR {getTotal().toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
         </span>
       </div>
 
-      <div className="md:w-[800px] w-full m-[10px] p-[10px] bg-white rounded-lg shadow-2xl flex flex-col gap-4">
+      {/* User Details Form */}
+      <div className="w-full max-w-4xl bg-white rounded-xl shadow-lg p-4 sm:p-6 flex flex-col gap-4">
         <input
-          className="w-full h-[45px] border border-gray-300 rounded-lg p-[10px]"
           type="text"
           placeholder="Enter your name"
           value={name}
           onChange={(e) => setName(e.target.value)}
+          className="w-full h-12 border border-gray-300 rounded-lg px-3 focus:outline-none focus:ring-2 focus:ring-pink-400 transition"
         />
         <input
-          className="w-full h-[45px] border border-gray-300 rounded-lg p-[10px]"
           type="text"
           placeholder="Enter your address"
           value={address}
           onChange={(e) => setAddress(e.target.value)}
+          className="w-full h-12 border border-gray-300 rounded-lg px-3 focus:outline-none focus:ring-2 focus:ring-pink-400 transition"
         />
         <input
-          className="w-full h-[45px] border border-gray-300 rounded-lg p-[10px]"
           type="text"
           placeholder="Enter your phone number"
           value={phone}
           onChange={(e) => setPhone(e.target.value)}
+          className="w-full h-12 border border-gray-300 rounded-lg px-3 focus:outline-none focus:ring-2 focus:ring-pink-400 transition"
         />
       </div>
     </div>

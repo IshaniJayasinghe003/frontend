@@ -4,14 +4,19 @@ export default function HomePage() {
 
       {/* Hero Section */}
       <div className="relative w-full min-h-screen flex">
+
+        {/* Background Image */}
         <img 
           src="blush.jpg" 
           alt="Hero" 
-          className="w-full h-full object-cover"
+          className="absolute inset-0 w-full h-full object-cover object-center"
         />
 
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-black/40"></div> {/* semi-transparent overlay */}
+
         {/* Overlay Text */}
-        <div className="absolute inset-0 flex flex-col justify-center items-center text-center px-4 md:px-20">
+        <div className="relative z-10 flex flex-col justify-center items-center text-center px-4 sm:px-10 md:px-20 min-h-screen">
           <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold text-white mb-4 drop-shadow-lg">
             Welcome to Evara Cosmetics
           </h1>
@@ -25,6 +30,7 @@ export default function HomePage() {
             Shop Now
           </button>
         </div>
+
       </div>
 
     </div>

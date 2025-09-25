@@ -26,13 +26,13 @@ export default function RegisterPage() {
   };
 
   return (
-    <div className="w-full h-full relative ">
+    <div className="w-full min-h-screen flex items-center justify-center relative ">
 
       {/* Background image with overlay */}
       <img 
-        src="brush.jpg" 
+        src="hero_bg.jpg" 
         alt="Background" 
-        className=" w-full h-full object-cover "
+        className="absolute w-full h-full object-cover "
       />
 
       <div className="relative w-full max-w-md sm:max-w-sm mx-4 bg-white rounded-xl shadow-xl p-6 sm:p-4">

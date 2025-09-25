@@ -1,6 +1,21 @@
+import { Link } from "react-router-dom";
+
 export default function HomePage() {
   return (
-    <div className="w-full">
+    <div className="w-full min-h-screen relative">
+
+      {/* Top Navigation Links */}
+      <div className="absolute top-0 left-0 w-full flex justify-center gap-4 sm:gap-8 p-4 z-20 bg-black/30">
+        <Link to="/reviews" className="text-white font-semibold hover:text-pink-300 transition">
+          Reviews
+        </Link>
+        <Link to="/about-us" className="text-white font-semibold hover:text-pink-300 transition">
+          About Us
+        </Link>
+        <Link to="/contact-us" className="text-white font-semibold hover:text-pink-300 transition">
+          Contact Us
+        </Link>
+      </div>
 
       {/* Hero Section */}
       <div className="relative w-full min-h-screen flex">
@@ -13,7 +28,7 @@ export default function HomePage() {
         />
 
         {/* Overlay */}
-        <div className="absolute inset-0 bg-black/40"></div> {/* semi-transparent overlay */}
+        <div className="absolute inset-0 bg-black/40"></div>
 
         {/* Overlay Text */}
         <div className="relative z-10 flex flex-col justify-center items-center text-center px-4 sm:px-10 md:px-20 min-h-screen">
@@ -25,14 +40,13 @@ export default function HomePage() {
           </p>
           <button 
             onClick={() => window.location.href="/products"} 
-            className="w-full sm:w-auto px-6 sm:px-10 py-3 sm:py-4 bg-white text-black font-semibold rounded-full shadow-lg hover:bg-gray-100 hover:scale-105 transition transform duration-300"
+            className="w-full sm:w-auto px-6 sm:px-10 py-3 sm:py-4 bg-pink-300 text-white font-semibold rounded-full shadow-lg hover:bg-pink-400 hover:scale-105 transition transform duration-300"
           >
             Shop Now
           </button>
         </div>
 
       </div>
-
     </div>
   );
 }

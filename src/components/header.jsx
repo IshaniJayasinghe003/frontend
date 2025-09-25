@@ -20,7 +20,7 @@ export default function Header() {
                 onClick={() => setIsOpen(close)}
               />
               <img
-                className="w-[150px] h-[80px] object-cover cursor-pointer"
+                className="w-[150px] h-[100px] object-cover cursor-pointer"
                 onClick={() => navigate("/")}
                 src="/eva.png"
                 alt="Eva"
@@ -63,7 +63,7 @@ export default function Header() {
       )}
 
       <img
-        className="w-[150px] h-[80px] object-cover absolute md:left-[40px] cursor-pointer"
+        className="w-[150px] h-[100px] object-cover absolute md:left-[40px] cursor-pointer"
         onClick={() => navigate("/")}
         src="/eva.png"
         alt="Eva"

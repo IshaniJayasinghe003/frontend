@@ -5,7 +5,7 @@ export default function HomePage() {
     <div className="w-full min-h-screen relative">
 
       {/* Top Navigation Links */}
-      <div className="absolute top-0 left-0 w-full flex flex-wrap justify-center gap-6 sm:gap-10 p-4 z-20  sm:bg-transparent">
+      <div className="absolute top-0 left-0 w-full flex flex-wrap justify-center gap-6 sm:gap-10 p-4 z-20 sm:bg-transparent">
         <Link 
           to="/reviews" 
           className="text-white text-base sm:text-3xl font-bold hover:text-pink-300 transition"
@@ -40,11 +40,11 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-black/40"></div>
 
         {/* Overlay Text */}
-        <div className="relative z-10 flex flex-col justify-center items-center text-center px-6 sm:px-10 md:px-20 min-h-screen">
-          <h1 className="text-2xl sm:text-4xl md:text-6xl font-bold text-white mb-4 drop-shadow-lg leading-tight">
+        <div className="relative z-10 flex flex-col justify-center items-center text-center px-6 sm:px-10 md:px-20 min-h-screen space-y-6">
+          <h1 className="text-2xl sm:text-4xl md:text-6xl font-bold text-white drop-shadow-lg leading-tight">
             Welcome to Evara Cosmetics
           </h1>
-          <p className="text-sm sm:text-lg md:text-xl text-white font-bold mb-6 max-w-xl sm:max-w-3xl drop-shadow-md">
+          <p className="text-sm sm:text-lg md:text-xl text-white font-bold max-w-xl sm:max-w-3xl drop-shadow-md">
             Discover beauty that empowers you. At Evara, we bring you a hand-picked collection of skincare, makeup, haircare, and wellness products designed to enhance your natural glow. From nourishing cleansers and hydrating serums to bold lipsticks and luxury fragrances, everything you need to feel confident is right here.
           </p>
           <button 

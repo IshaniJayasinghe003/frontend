@@ -106,7 +106,7 @@ export default function CheckoutPage() {
                 if (newCart[index].quantity <= 0) newCart.splice(index, 1);
                 setCart(newCart);
               }}
-              className="w-10 h-10 bg-blue-500 text-white rounded-lg font-bold hover:bg-blue-600 transition"
+              className="w-10 h-10 bg-pink-500 text-white rounded-lg font-bold hover:bg-pink-600 transition"
             >
               -
             </button>
@@ -117,7 +117,7 @@ export default function CheckoutPage() {
                 newCart[index].quantity += 1;
                 setCart(newCart);
               }}
-              className="w-10 h-10 bg-blue-500 text-white rounded-lg font-bold hover:bg-blue-600 transition"
+              className="w-10 h-10 bg-pink-500 text-white rounded-lg font-bold hover:bg-pink-600 transition"
             >
               +
             </button>

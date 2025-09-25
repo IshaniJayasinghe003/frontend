@@ -8,19 +8,19 @@ export default function HomePage() {
       <div className="absolute top-0 left-0 w-full flex flex-wrap justify-center gap-4 sm:gap-8 p-4 z-20  sm:bg-transparent">
         <Link 
           to="/reviews" 
-          className="text-white text-base sm:text-xl font-semibold hover:text-pink-300 transition"
+          className="text-white text-base sm:text-1xl font-semibold hover:text-pink-300 transition"
         >
           Reviews
         </Link>
         <Link 
           to="/about-us" 
-          className="text-white text-base sm:text-xl font-semibold hover:text-pink-300 transition"
+          className="text-white text-base sm:text-1xl font-semibold hover:text-pink-300 transition"
         >
           About Us
         </Link>
         <Link 
           to="/contact-us" 
-          className="text-white text-base sm:text-xl font-semibold hover:text-pink-300 transition"
+          className="text-white text-base sm:text-1xl font-semibold hover:text-pink-300 transition"
         >
           Contact Us
         </Link>

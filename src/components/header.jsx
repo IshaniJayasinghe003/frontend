@@ -22,8 +22,8 @@ export default function Header() {
               <img
                 className="w-[150px] h-[80px] object-cover cursor-pointer"
                 onClick={() => navigate("/")}
-                src="/evara.png"
-                alt="Evara"
+                src="/eva.png"
+                alt="Eva"
               />
             </div>
             <div className="w-full h-full flex flex-col p-[45px] items-start">
@@ -65,8 +65,8 @@ export default function Header() {
       <img
         className="w-[150px] h-[80px] object-cover absolute md:left-[40px] cursor-pointer"
         onClick={() => navigate("/")}
-        src="/evara.png"
-        alt="Evara"
+        src="/eva.png"
+        alt="Eva"
       />
 
       <GiHamburgerMenu

@@ -146,7 +146,7 @@ export default function CheckoutPage() {
       <div className="w-full max-w-4xl bg-white rounded-xl shadow-lg flex flex-col sm:flex-row justify-between items-center p-4 sm:p-6 gap-4">
         <button
           onClick={placeOrder}
-          className="w-full sm:w-48 h-12 bg-green-600 text-white rounded-lg font-semibold hover:bg-green-700 transition"
+          className="w-full sm:w-48 h-12 bg-pink-600 text-white rounded-lg font-semibold hover:bg-pink-700 transition"
         >
           Place Order
         </button>

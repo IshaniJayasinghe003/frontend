@@ -47,6 +47,9 @@ export default function HomePage() {
           <p className="text-sm sm:text-lg md:text-xl text-white font-bold max-w-xl sm:max-w-3xl drop-shadow-md">
             Discover beauty that empowers you. At Evara, we bring you a hand-picked collection of skincare, makeup, haircare, and wellness products designed to enhance your natural glow. From nourishing cleansers and hydrating serums to bold lipsticks and luxury fragrances, everything you need to feel confident is right here.
           </p>
+          <p className="text-sm sm:text-lg md:text-xl text-white font-bold mb-6 max-w-xl sm:max-w-3xl drop-shadow-md">
+           From nourishing cleansers and hydrating serums to bold lipsticks and luxury fragrances, everything you need to feel confident is right here.
+          </p>
           <button 
             onClick={() => window.location.href="/products"} 
             className="w-full sm:w-auto px-6 sm:px-10 py-4 sm:py-4 bg-pink-400 text-white font-bold rounded-full shadow-lg hover:bg-pink-500 hover:scale-105 transition transform duration-300"

@@ -90,7 +90,7 @@ export default function ProductOverViewPage() {
                   },
                 });
               }}
-              className="w-full sm:w-1/2 py-3 bg-blue-900 text-white font-semibold rounded-xl shadow-lg hover:bg-white hover:text-blue-900 hover:border hover:border-blue-900 transition"
+              className="w-full sm:w-1/2 py-3 bg-pink-900 text-white font-semibold rounded-xl shadow-lg hover:bg-white hover:text-pink-900 hover:border hover:border-pink-900 transition"
             >
               Buy Now
             </button>
@@ -100,7 +100,7 @@ export default function ProductOverViewPage() {
                 addToCart(product, 1);
                 toast.success("Product added to cart");
               }}
-              className="w-full sm:w-1/2 py-3 bg-blue-600 text-white font-semibold rounded-xl shadow-lg hover:bg-white hover:text-blue-600 hover:border hover:border-blue-600 transition"
+              className="w-full sm:w-1/2 py-3 bg-pink-600 text-white font-semibold rounded-xl shadow-lg hover:bg-white hover:text-pink-600 hover:border hover:border-pink-600 transition"
             >
               Add to Cart
             </button>

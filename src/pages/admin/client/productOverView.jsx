@@ -4,7 +4,7 @@ import toast from "react-hot-toast";
 import axios from "axios";
 import Loader from "../../../components/loader";
 import ImageSlider from "../../../components/imageSlider";
-import { addToCart, getCart } from "../../../utils/cart"; // ✅ fixed import
+import { addToCart, getCart } from "../../../utils/cart"; 
 
 export default function ProductOverViewPage() {
     const params = useParams();

@@ -35,13 +35,13 @@ export default function AddProductpage() {
     const productData = {
       productId: productId,
       name: productName,
-      altNames: altNamesInArray, // ✅ FIXED KEY
+      altNames: altNamesInArray, 
       labelledPrice: labelledPrice,
       price: price,
       images: responses,
       description: description,
       stock: stock,
-      isAvailable: isAvailable === "true", // ✅ FIXED BOOLEAN
+      isAvailable: isAvailable === "true", 
       category: category,
   };
 
@@ -60,7 +60,7 @@ export default function AddProductpage() {
       })
       .then((res) => {
         console.log("Product added successfully");
-        console.log(res.data); // ✅ Fixed res usage
+        console.log(res.data); 
         toast.success("Product added successfully");
         navigate("/admin/products");
       })

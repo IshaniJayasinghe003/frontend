@@ -5,7 +5,7 @@ export default function HomePage() {
     <div className="w-full min-h-screen relative">
 
       {/* Top Navigation Links */}
-      <div className="absolute top-0 left-0 w-full flex flex-wrap justify-center gap-4 sm:gap-8 p-4 z-20  sm:bg-transparent">
+      <div className="absolute top-0 left-0 w-full flex flex-wrap justify-center gap-6 sm:gap-10 p-4 z-20  sm:bg-transparent">
         <Link 
           to="/reviews" 
           className="text-white text-base sm:text-3xl font-bold hover:text-pink-300 transition"

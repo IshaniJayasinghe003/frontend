@@ -44,7 +44,7 @@ export default function HomePage() {
           <h1 className="text-2xl sm:text-4xl md:text-6xl font-bold text-white mb-4 drop-shadow-lg leading-tight">
             Welcome to Evara Cosmetics
           </h1>
-          <p className="text-sm sm:text-lg md:text-xl text-white mb-6 max-w-xl sm:max-w-3xl drop-shadow-md">
+          <p className="text-sm sm:text-lg md:text-xl text-white font-bold mb-6 max-w-xl sm:max-w-3xl drop-shadow-md">
             Discover beauty that empowers you. At Evara, we bring you a hand-picked collection of skincare, makeup, haircare, and wellness products designed to enhance your natural glow. From nourishing cleansers and hydrating serums to bold lipsticks and luxury fragrances, everything you need to feel confident is right here.
           </p>
           <button 

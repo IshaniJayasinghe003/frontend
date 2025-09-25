@@ -6,13 +6,13 @@ export default function HomePage() {
 
       {/* Top Navigation Links */}
       <div className="absolute top-0 left-0 w-full flex justify-center gap-4 sm:gap-8 p-4 z-20 bg-black/30">
-        <Link to="/reviews" className="text-white font-semibold hover:text-pink-300 transition">
+        <Link to="/reviews" className="text-white text-xl font-semibold hover:text-white transition">
           Reviews
         </Link>
-        <Link to="/about-us" className="text-white font-semibold hover:text-pink-300 transition">
+        <Link to="/about-us" className="text-white text-xlfont-semibold hover:text-whitetransition">
           About Us
         </Link>
-        <Link to="/contact-us" className="text-white font-semibold hover:text-pink-300 transition">
+        <Link to="/contact-us" className="text-white text-xl font-semibold hover:text-white transition">
           Contact Us
         </Link>
       </div>

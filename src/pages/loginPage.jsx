@@ -35,7 +35,7 @@ export default function LoginPage() {
 
     function login() {
         console.log(email, password)
-        axios.post(import.meta.env.VITE_BACKEND_URL + "POST https://backend-1wxp.onrender.com/api/users/login", {
+        axios.post(import.meta.env.VITE_BACKEND_URL +"/api/users/login", {
             email: email,
             password: password
         }).then(

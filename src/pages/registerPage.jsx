@@ -45,7 +45,7 @@ export default function RegisterPage() {
         alt="Background"
         className="absolute w-full h-full object-cover"
       />
-      <div className="absolute inset-0 bg-black/30"></div> {/* dark overlay */}
+      <div className="absolute inset-0 bg-black/30"></div> 
 
       <div className="relative w-full max-w-md sm:max-w-sm mx-4 bg-white rounded-2xl shadow-2xl p-6 sm:p-8 flex flex-col">
         <h1 className="text-3xl sm:text-4xl font-bold text-center mb-6 text-gray-800 drop-shadow-md">

@@ -1,10 +1,12 @@
 import { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
+import axios from "axios";
 
 export default function RegisterPage() {
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
-    name: "",
+    firstName: "",
+    lastName: "",
     email: "",
     password: "",
     confirmPassword: ""
@@ -14,24 +16,33 @@ export default function RegisterPage() {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (formData.password !== formData.confirmPassword) {
       alert("Passwords do not match");
       return;
     }
-    console.log(formData);
-    alert("Registered successfully!");
-    navigate("/login");
+
+    try {
+      const res = await axios.post(
+        `${import.meta.env.VITE_BACKEND_URL}/api/users/`,
+        formData
+      );
+      console.log(res.data);
+      alert("Registered successfully!");
+      navigate("/login");
+    } catch (error) {
+      console.error("Registration error:", error);
+      alert("Failed to register. Please try again.");
+    }
   };
 
   return (
-    <div className="w-full min-h-screen flex items-center justify-center relative bg-gray-100">
-
+    <div className="w-full min-h-screen flex items-center justify-center relative bg-gray-100 font-">
       {/* Background image with overlay */}
-      <img 
-        src="hero_bg.jpg" 
-        alt="Background" 
+      <img
+        src="hero_bg.jpg"
+        alt="Background"
         className="absolute w-full h-full object-cover"
       />
       <div className="absolute inset-0 bg-black/30"></div> {/* dark overlay */}
@@ -42,15 +53,29 @@ export default function RegisterPage() {
         </h1>
 
         <form onSubmit={handleSubmit} className="flex flex-col gap-4">
-          {/* Full Name */}
+          {/* First Name */}
           <div className="flex flex-col">
-            <label className="text-gray-700 font-semibold mb-1 text-sm sm:text-base">Full Name</label>
-            <input 
-              type="text" 
-              name="name"
-              value={formData.name} 
-              onChange={handleChange} 
-              placeholder="John Doe"
+            <label className="text-gray-700 font-semibold mb-1 text-sm sm:text-base">First Name</label>
+            <input
+              type="text"
+              name="firstName"
+              value={formData.firstName}
+              onChange={handleChange}
+              placeholder="John"
+              className="border border-gray-300 rounded-lg h-10 sm:h-12 px-3 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-pink-400 transition"
+              required
+            />
+          </div>
+
+          {/* Last Name */}
+          <div className="flex flex-col">
+            <label className="text-gray-700 font-semibold mb-1 text-sm sm:text-base">Last Name</label>
+            <input
+              type="text"
+              name="lastName"
+              value={formData.lastName}
+              onChange={handleChange}
+              placeholder="Doe"
               className="border border-gray-300 rounded-lg h-10 sm:h-12 px-3 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-pink-400 transition"
               required
             />
@@ -59,11 +84,11 @@ export default function RegisterPage() {
           {/* Email */}
           <div className="flex flex-col">
             <label className="text-gray-700 font-semibold mb-1 text-sm sm:text-base">Email</label>
-            <input 
-              type="email" 
+            <input
+              type="email"
               name="email"
-              value={formData.email} 
-              onChange={handleChange} 
+              value={formData.email}
+              onChange={handleChange}
               placeholder="example@email.com"
               className="border border-gray-300 rounded-lg h-10 sm:h-12 px-3 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-pink-400 transition"
               required
@@ -73,11 +98,11 @@ export default function RegisterPage() {
           {/* Password */}
           <div className="flex flex-col">
             <label className="text-gray-700 font-semibold mb-1 text-sm sm:text-base">Password</label>
-            <input 
-              type="password" 
+            <input
+              type="password"
               name="password"
-              value={formData.password} 
-              onChange={handleChange} 
+              value={formData.password}
+              onChange={handleChange}
               placeholder="Enter password"
               className="border border-gray-300 rounded-lg h-10 sm:h-12 px-3 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-pink-400 transition"
               required
@@ -87,18 +112,18 @@ export default function RegisterPage() {
           {/* Confirm Password */}
           <div className="flex flex-col">
             <label className="text-gray-700 font-semibold mb-1 text-sm sm:text-base">Confirm Password</label>
-            <input 
-              type="password" 
+            <input
+              type="password"
               name="confirmPassword"
-              value={formData.confirmPassword} 
-              onChange={handleChange} 
+              value={formData.confirmPassword}
+              onChange={handleChange}
               placeholder="Confirm password"
               className="border border-gray-300 rounded-lg h-10 sm:h-12 px-3 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-pink-400 transition"
               required
             />
           </div>
 
-          <button 
+          <button
             type="submit"
             className="mt-4 bg-pink-500 hover:bg-pink-600 text-white font-semibold h-12 rounded-xl shadow-lg transition duration-300 text-base sm:text-lg"
           >
